@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View, Image, Pressable, ScrollView } from 'react-native'
-import { getImage } from '../../../assets/Images/images'
+import { getImage } from '../../../../assets/Images/images'
 import React, { useState } from 'react';
 import { useNavigation, useRoute, useNavigationState } from '@react-navigation/native';
-import rfSpacing from '../../../theme/rfSpacing';
-import colors from '../../../theme/colors';
+import rfSpacing from '../../../../theme/rfSpacing';
+import colors from '../../../../theme/colors';
 import LinearGradient from 'react-native-linear-gradient';
-import Tick from '../../../assets/Images/SVGS/Tick';
-import FilterModal from '../../../Ui/LP_Calender';
+import Tick from '../../../../assets/Images/SVGS/Tick';
+import FilterModal from '../../../../Ui/LP_Calender';
 import FastImage from 'react-native-fast-image';
-import TabBar from '../../../Ui/LP_ToggleButton';
+import TabBar from '../../../../Ui/LP_ToggleButton';
 import { StatusBar } from "react-native";
 
 
@@ -56,7 +56,7 @@ const Points = () => {
                 <View style={{ flexDirection: "row", }}>
                   <FastImage
                     style={styles.gif}
-                    source={require("../../../assets/Images/gif.gif")}
+                    source={require("../../../../assets/Images/gif.gif")}
                     resizeMode={FastImage.resizeMode.contain}
                   />
                   {/* <View style={{ height: rfSpacing['6xssml'], width: rfSpacing['6xssml'], backgroundColor: colors.LP_Gifbg, borderWidth: rfSpacing['xxxs'], borderColor: colors.LP_Gifbg, borderRadius: rfSpacing['6xl'], alignSelf: "center", marginLeft: rfSpacing['xl'] }}>
@@ -146,7 +146,7 @@ const Points = () => {
                     </View>
                   </View>
 
-                  {/* Date & Heading */}
+               
                   <View>
                     <Text
                       style={{

@@ -7,11 +7,11 @@ import Points from '../../screens/App/LoyaltyPoints';
 import ScanBar from '../../screens/App/QRScanner/ScanBar';
 import Order from '../../screens/App/MyOrder';
 import Profile from '../../screens/App/Profile';
-import Scanner from '../../screens/App/QRScanner';
+// import Scanner from '../../screens/App/QRScanner/Scanner';
 
-// import Levels from '../../screens/App/LoyaltyPoints/Levels/Levels';
-// import Redeem from '../../screens/App/LoyaltyPoints/Reedem';
-// import History from '../../screens/App/LoyaltyPoints/History';
+import Levels from '../../screens/App/LoyaltyPoints/Levels';
+import Redeem from '../../screens/App/LoyaltyPoints/Redeem';
+import History from '../../screens/App/LoyaltyPoints/History';
 
 import colors from '../../theme/colors';
 import HomeTab from '../../assets/Images/ButtomTab/HomeTab';
@@ -153,10 +153,10 @@ export default function ButtomTAB() {
       <Tab.Screen name="ScanBar" component={ScanBar} options={{ tabBarStyle: { display: 'none' } }} />
       <Tab.Screen name="Order" component={Order} />
       <Tab.Screen name="Profile" component={Profile} options={{ tabBarStyle: { display: 'none' } }} />
-      <Tab.Screen name="Scanner" component={Scanner} options={{ tabBarButton: () => null }} />
-      {/* <Tab.Screen name="Levels" component={Levels} options={{ tabBarButton: () => null, headerShown: false, }} />
+      {/* <Tab.Screen name="Scanner" component={Scanner} options={{ tabBarButton: () => null }} /> */}
+      <Tab.Screen name="Levels" component={Levels} options={{ tabBarButton: () => null, headerShown: false, }} />
       <Tab.Screen name="Redeem" component={Redeem} options={{ tabBarButton: () => null, headerShown: false, }} />
-      <Tab.Screen name="History" component={History} options={{ tabBarButton: () => null, headerShown: false, }} /> */}
+      <Tab.Screen name="History" component={History} options={{ tabBarButton: () => null, headerShown: false, }} />
         {/* <Tab.Screen name="Payment" component={Payment} options={{ tabBarButton: () => null, headerShown: false, }} /> */}
     </Tab.Navigator>
 

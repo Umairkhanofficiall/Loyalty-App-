@@ -1,6 +1,6 @@
 import * as React from "react"
 import Svg, { Path } from "react-native-svg"
-const verifyicon = (props) => (
+const Verifyicon = (props) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={18}
@@ -22,4 +22,4 @@ const verifyicon = (props) => (
     />
   </Svg>
 )
-export default verifyicon
+export default Verifyicon

@@ -96,6 +96,36 @@ export default StyleSheet.create({
         fontWeight: "600",
         fontFamily: "Font/Plus Jakarta Sans"
     },
+    WhiteButton:{
+        width: rfSpacing['3.4H'],
+        height: rfSpacing['6xml'],
+        borderRadius: rfSpacing['4xxm'],
+        alignSelf: "center",
+        marginTop: rfSpacing['3xl'],
+        textAlign: "center",
+        color: colors.LP_HeadingColor,
+        verticalAlign: "middle",
+        fontSize: rfSpacing['xl'],
+        fontWeight:"bold",
+        fontFamily: "Font/Plus Jakarta Sans",
+        borderWidth:rfSpacing['xxxs'],
+        borderColor:colors.LP_ProfileGrayborder
+    },
+    ButtonForModel:{
+        width: rfSpacing['3.5H'],
+        height: rfSpacing['6xml'],
+        borderRadius: rfSpacing['4xxm'],
+        alignSelf: "center",
+        marginTop: rfSpacing['3xl'],
+        textAlign: "center",
+        color: colors.LP_White,
+        verticalAlign: "middle",
+        fontSize: rfSpacing['xl'],
+        fontWeight:"bold",
+        fontFamily: "Font/Plus Jakarta Sans",
+        borderWidth:rfSpacing['xxxs'],
+        borderColor:colors.LP_ProfileGrayborder
+    },
     container: {
         flex: 1,
         justifyContent: 'center',

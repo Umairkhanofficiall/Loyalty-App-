@@ -81,6 +81,7 @@ export default {
   '2.1':moderateScale(210),
   '2.25H':moderateScale(225),
   '2.30H':moderateScale(230),
+  '2.40H':moderateScale(240),
   '2.5H': moderateScale(250),
   '2.6H': moderateScale(260),
   '2.7H':moderateScale(270),

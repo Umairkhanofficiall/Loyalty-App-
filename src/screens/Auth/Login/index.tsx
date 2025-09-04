@@ -25,12 +25,12 @@ export default function App({ navigation }: Props) {
   
 
   return (
-    <>
-      <StatusBar
-        translucent={true}
-        backgroundColor="white"
-        barStyle="dark-content"
-      />
+    // <>
+    //   <StatusBar
+    //     translucent={true}
+    //     backgroundColor="white"
+    //     barStyle="dark-content"
+    //   />
 
       <LinearGradient
         colors={['#ECECEC', '#FCD7CD']}
@@ -80,7 +80,7 @@ export default function App({ navigation }: Props) {
           onPress={() => navigation.navigate('FAuth')} />
         </View>
       </LinearGradient>
-    </>
+    // </> 
   );
 }
 

@@ -1,18 +1,23 @@
 import { StyleSheet, Text, View, Image, Pressable, ScrollView } from 'react-native'
-import { getImage } from '../../../assets/Images/images'
+import { getImage } from '../../../../assets/Images/images'
 import React, { useState } from 'react';
 import { useNavigation, useRoute, useNavigationState } from '@react-navigation/native';
-import rfSpacing from '../../../theme/rfSpacing';
-import colors from '../../../theme/colors';
+import rfSpacing from '../../../../theme/rfSpacing';
+import colors from '../../../../theme/colors';
 import LinearGradient from 'react-native-linear-gradient';
-import Tick from '../../../assets/Images/SVGS/Tick';
-import FilterModal from '../../../Ui/LP_Calender';
+import Tick from '../../../../assets/Images/SVGS/Tick';
+import FilterModal from '../../../../Ui/LP_Calender';
 import FastImage from 'react-native-fast-image';
-import TabBar from '../../../Ui/LP_ToggleButton';
+import TabBar from '../../../../Ui/LP_ToggleButton';
 import { StatusBar } from "react-native";
+import Flag from '../../../../assets/Images/Levels/Flag';
+import Boxes from '../../../../assets/Images/Levels/Boxes';
+import Flagradeem from '../../../../assets/Images/Levels/Flagradeem';
+
 
 
 const Points = () => {
+  const navigation = useNavigation();
 
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -37,7 +42,7 @@ const Points = () => {
     //       />
 
     <View style={styles.container}>
-      <ScrollView contentContainerStyle={{ paddingBottom: rfSpacing['9xml'] }}>
+      <ScrollView contentContainerStyle={{ paddingBottom: rfSpacing['10xl'] }}>
         <View style={styles.container2}>
           <Text style={{ color: colors.LP_White, fontSize: rfSpacing['4xl'], textAlign: "center", marginTop: rfSpacing['4xxm'] }}>Loyalty Points</Text>
           <View style={styles.container3}>
@@ -56,7 +61,7 @@ const Points = () => {
                 <View style={{ flexDirection: "row", }}>
                   <FastImage
                     style={styles.gif}
-                    source={require("../../../assets/Images/gif.gif")}
+                    source={require("../../../../assets/Images/gif.gif")}
                     resizeMode={FastImage.resizeMode.contain}
                   />
                   {/* <View style={{ height: rfSpacing['6xssml'], width: rfSpacing['6xssml'], backgroundColor: colors.LP_Gifbg, borderWidth: rfSpacing['xxxs'], borderColor: colors.LP_Gifbg, borderRadius: rfSpacing['6xl'], alignSelf: "center", marginLeft: rfSpacing['xl'] }}>
@@ -98,123 +103,54 @@ const Points = () => {
             </View>
 
           </View>
+
         </View>
 
         <TabBar />
-        <View style={{ flexDirection: "row",marginTop:rfSpacing['3xl'] }}>
-          <Text style={{ color: colors.LP_HeadingColor, fontSize: rfSpacing['xxl'], fontWeight: "600", marginTop: rfSpacing['4xxsl'], left: rfSpacing['4xl'] }}>
-            Scan History
-          </Text>
-          <Pressable onPress={() => setModalVisible(true)}>
-            <FilterModal
-              visible={modalVisible}
-              onClose={() => setModalVisible(false)}
-              onApply={handleApply}
-            />
-            <View style={{ width: rfSpacing['1.05H'], height: rfSpacing['5xl'], borderColor: colors.LP_Thismonthborder, borderWidth: rfSpacing['xxxs'], backgroundColor: colors.LP_White, borderRadius: rfSpacing['s'], marginLeft: rfSpacing['1.5H'], marginTop: rfSpacing['4xl'] }}>
-              <View style={{ flexDirection: "row" }}>
-                <Text style={{ fontSize: rfSpacing['ml'], fontWeight: "400", color: colors.LP_HeadingColor, textAlign: "center", paddingTop: rfSpacing['xs'], marginLeft: rfSpacing['xs'] }}>This month</Text>
-                <Image source={getImage('arrowdown')} style={{ height: rfSpacing['4xll'], width: rfSpacing['4xll'], marginTop: rfSpacing['xs'] }} />
-              </View>
+
+        <Text style={styles.textForOptions}>Select Option to Redeem</Text>
+
+        <Pressable onPress={() => navigation.navigate('BuyItems' as never)}
+          style={styles.Buyitems}>
+            
+          <View style={styles.RedeemButton}>
+            <View style={styles.IconBG}>
+              <Flagradeem style={styles.IconItem} />
             </View>
-          </Pressable>
-        </View>
+            <View>
+              <Text style={styles.subText}>Buy Item</Text>
+              <Text style={styles.subDesc}>You can use your earned Points to purchase any items you like.</Text>
+            </View>
+            <Image source={getImage('arrow')} style={styles.ImageRedeem} />
+          </View>
 
+        </Pressable>
+        <Pressable onPress={() => navigation.navigate('Payment' as never)}
+          style={styles.Buyitems}>
+          <View style={styles.RedeemButton}>
+            <View style={styles.IconBG}>
+              <Boxes style={styles.IconItem} />
+            </View>
+            <View>
+              <Text style={styles.subText}>Redeem to cash</Text>
+              <Text style={styles.subDesc}>Convert Your Earned Points Into Real Cash</Text>
+            </View>
+            <Image source={getImage('arrow')} style={styles.ImageRedeem} />
+          </View>
+        </Pressable>
 
-
-        <View style={{}}>
-          <>
-            {data.map((item) => (
-              <View key={item.id} style={styles.subcontainer3}>
-                <View style={{ flexDirection: "row", marginTop: rfSpacing["xml"] }}>
-                  <View
-                    style={{
-                      height: rfSpacing["5xxml"],
-                      width: rfSpacing["5xxml"],
-                      backgroundColor: colors.LP_IcontickBG,
-                      borderRadius: rfSpacing["4xl"],
-                      marginLeft: rfSpacing["m"],
-                    }}
-                  >
-                    <View
-                      style={{
-                        marginLeft: rfSpacing["xm"],
-                        marginTop: rfSpacing["xm"],
-                      }}
-                    >
-                      <Tick />
-                    </View>
-                  </View>
-
-                  {/* Date & Heading */}
-                  <View>
-                    <Text
-                      style={{
-                        color: colors.LP_borderText,
-                        marginLeft: rfSpacing["l"],
-                      }}
-                    >
-                      {item.date} | {item.time}
-                    </Text>
-                    <Text
-                      style={{
-                        color: colors.LP_HeadingColor,
-                        marginLeft: rfSpacing["xl"],
-                        fontSize: rfSpacing["xl"],
-                        fontWeight: "600",
-                      }}
-                    >
-                      Got Points
-                    </Text>
-                  </View>
-
-                  {/* Points */}
-                  <View
-                    style={{
-                      flexDirection: "row",
-                      marginLeft: rfSpacing["8xml"],
-                      gap: rfSpacing["xs"],
-                    }}
-                  >
-                    <View style={styles.iconWrapper3}>
-                      <Image
-                        source={getImage("tick")}
-                        style={{
-                          height: rfSpacing["xl"],
-                          width: rfSpacing["xl"],
-                          resizeMode: "contain",
-                          top: -rfSpacing["xxxs"],
-                        }}
-                      />
-                    </View>
-                    <Text
-                      style={{
-                        color: colors.LP_HeadingColor,
-                        fontSize: rfSpacing["xxl"],
-                        marginTop: rfSpacing["ms"],
-                      }}
-                    >
-                      {item.points}
-                    </Text>
-                  </View>
-                </View>
-              </View>
-
-            ))}
-          </>
-        </View>
       </ScrollView>
     </View>
 
 
   )
 }
-
 export default Points
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.LP_Pointsbgcolor,
+    flex: 1,
   },
   container2: {
     width: rfSpacing['3.85H'],
@@ -304,4 +240,61 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginLeft: 20
   },
+  Buyitems: {
+    height: rfSpacing['1H'],
+    width: rfSpacing['3.35H'],
+    borderWidth: rfSpacing['xxxs'],
+    borderColor: colors.LP_BorderBG,
+    backgroundColor: colors.LP_White,
+    alignSelf: "center",
+    borderRadius: rfSpacing['xl'],
+    marginTop: rfSpacing['xl'],
+   justifyContent:"space-evenly",
+   
+    
+
+  },
+  textForOptions: {
+    color: colors.LP_HeadingColor,
+    fontSize: rfSpacing['xxl'],
+    fontWeight: "600",
+    textAlign: "center",
+    marginTop: rfSpacing['6xl'],
+  },
+  subText: {
+    color: colors.LP_HeadingColor,
+    fontSize: rfSpacing['xml'],
+    fontWeight: "600",
+    marginLeft:rfSpacing['m']
+
+  },
+  subDesc: {
+    color: colors.LP_NaturalGray,
+    fontSize: rfSpacing['mll'],
+    fontWeight: "400",
+    marginTop: rfSpacing['s'],
+    width: rfSpacing['2.30H'],
+    marginLeft:rfSpacing['m']
+  },
+  IconBG: {
+    width: rfSpacing['7xl'],
+    height: rfSpacing['7xl'],
+    backgroundColor: colors.LP_Gradienttwo,
+    borderRadius: rfSpacing['5xl'],
+    marginLeft:16
+  },
+  IconItem: {
+    alignSelf: "center",
+    marginTop: rfSpacing['l'],
+  },
+  RedeemButton: {
+    flexDirection: "row",
+    justifyContent:"center",
+    alignItems:"center"
+  },
+  ImageRedeem: {
+    height: rfSpacing['6xl'],
+    width: rfSpacing['6xl'],
+    left:-rfSpacing['xml']
+  }
 })
