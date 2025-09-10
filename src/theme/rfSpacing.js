@@ -65,6 +65,7 @@ export default {
   '1.4H': moderateScale(140),
   '1.45H':moderateScale(145),
   '1.42H':moderateScale(142),
+  '1.43H':moderateScale(143),
   '1.5H': moderateScale(150),
   '1.5HV': verticalScale(150),
   '1.6H':moderateScale(155),

@@ -16,7 +16,7 @@ export default function ScannerLoader({ message = "Loading app..." }: LoaderProp
           source={require("../assets/animations/spinner.json")} // 👈 apne path ka dhyaan rakho
           autoPlay
           loop
-          style={{ width: rfSpacing["10xl"], height: rfSpacing["10xl"] }}
+          style={styles.W_10XL_H_10XL}
         />
         <Text style={styles.loaderText}>{message}</Text>
       </View>
@@ -25,6 +25,8 @@ export default function ScannerLoader({ message = "Loading app..." }: LoaderProp
 }
 
 const styles = StyleSheet.create({
+  W_10XL_H_10XL:
+  { width: rfSpacing["10xl"], height: rfSpacing["10xl"] },
   loaderContainer: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.4)",

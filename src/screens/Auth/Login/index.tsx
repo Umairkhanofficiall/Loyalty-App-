@@ -2,28 +2,18 @@ import React, { useState } from 'react';
 import { Text, StyleSheet, View, TextInput, TouchableOpacity, Pressable } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import rfSpacing from '../../../theme/rfSpacing';
-import Spacing from '../../../theme/Spacing';
-import colors from '../../../theme/colors';
-import { StatusBar } from "react-native";
 import LP_Title from '../../../Ui/LP_Title';
 import styles from '../styles';
 import LP_Description from '../../../Ui/LP_Description';
 import LP_EmailInput from '../../../Ui/LP_EmailInput';
 import LP_PasswordInput from '../../../Ui/LP_PasswordInput';
 import LP_ButtonOrange from '../../../Ui/LP_ButtonOrange';
-
-
 type Props = {
   navigation: any;
 };
-
-
 export default function App({ navigation }: Props) {
-
   const [rememberMe, setRememberMe] = useState(false);
   const [forgotPressed, setForgotPressed] = useState(false);
-  
-
   return (
     // <>
     //   <StatusBar
@@ -31,7 +21,6 @@ export default function App({ navigation }: Props) {
     //     backgroundColor="white"
     //     barStyle="dark-content"
     //   />
-
       <LinearGradient
         colors={['#ECECEC', '#FCD7CD']}
         start={{ x: 0, y: 0 }}
@@ -45,11 +34,8 @@ export default function App({ navigation }: Props) {
           <View style={{width:rfSpacing['2.8H'], alignSelf:"center"}}>
           <LP_Description
             Title={'Please enter your email address and password below.'} /></View>
-
-
           <LP_EmailInput />
           <LP_PasswordInput />
-
           <View style={styles.rememberRow}>
             <TouchableOpacity
               onPress={() => setRememberMe(!rememberMe)}
@@ -74,7 +60,6 @@ export default function App({ navigation }: Props) {
               </Text>
             </Pressable>
           </View>
-
           <LP_ButtonOrange 
            title="Sign in"
           onPress={() => navigation.navigate('FAuth')} />

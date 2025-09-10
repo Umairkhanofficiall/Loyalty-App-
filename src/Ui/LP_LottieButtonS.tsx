@@ -5,7 +5,7 @@ import rfSpacing from "../theme/rfSpacing";
 import colors from "../theme/colors";
 
 
-const Loader = () => {
+const LP_LottieButtonS = () => {
   return (
     <View style={styles.loaderContainer}>
       <View>
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
   
 });
 
-export default Loader;
+export default LP_LottieButtonS;

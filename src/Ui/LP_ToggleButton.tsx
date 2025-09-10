@@ -1,19 +1,13 @@
-// TabBar.tsx
 import React from "react";
 import { View, Pressable, Text, StyleSheet } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import colors from "../theme/colors";
 import rfSpacing from "../theme/rfSpacing";
-
 const tabs = ["History", "Levels", "Redeem"];
-
 const TabBar = () => {
   const navigation = useNavigation();
   const route = useRoute();
-
-  // By default agar route.name nahi mila to History active hoga
   const activeTab = tabs.includes(route.name) ? route.name : "History";
-
   return (
     <View style={styles.container}>
       {tabs.map((tab) => {
@@ -29,7 +23,7 @@ const TabBar = () => {
                 style={[
                   styles.text,
                   isActive && styles.activeText,
-                  pressed && styles.hoverText, // hover = black text
+                  pressed && styles.hoverText,
                 ]}
               >
                 {tab}
@@ -41,9 +35,7 @@ const TabBar = () => {
     </View>
   );
 };
-
 export default TabBar;
-
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
@@ -69,6 +61,6 @@ const styles = StyleSheet.create({
     color: colors.LP_Mainorange,
   },
   hoverText: {
-    color: "black", // sirf hover par black
+    color: "black",
   },
 });

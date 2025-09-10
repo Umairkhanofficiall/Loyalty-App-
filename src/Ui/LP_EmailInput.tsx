@@ -1,6 +1,4 @@
 import { StyleSheet, Text, View,TextInput } from 'react-native'
-import rfSpacing from '../theme/rfSpacing'
-import colors from '../theme/colors'
 import React from 'react'
 import styles from '../screens/Auth/styles'
 import { useState } from 'react'

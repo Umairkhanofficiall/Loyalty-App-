@@ -1,6 +1,5 @@
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../../screens/App/Home';
 import Points from '../../screens/App/LoyaltyPoints';
@@ -8,11 +7,9 @@ import ScanBar from '../../screens/App/QRScanner/ScanBar';
 import Order from '../../screens/App/MyOrder';
 import Profile from '../../screens/App/Profile';
 // import Scanner from '../../screens/App/QRScanner/Scanner';
-
 import Levels from '../../screens/App/LoyaltyPoints/Levels';
 import Redeem from '../../screens/App/LoyaltyPoints/Redeem';
 import History from '../../screens/App/LoyaltyPoints/History';
-
 import colors from '../../theme/colors';
 import HomeTab from '../../assets/Images/ButtomTab/HomeTab';
 import LoyaltyTab from '../../assets/Images/ButtomTab/LoyaltyTab';
@@ -98,37 +95,7 @@ export default function ButtomTAB() {
           } else if (route.name === 'Profile') {
             return <ProfileTab />
           }
-
-
-          // if (route.name === 'ScanBar') {
-          //   return (
-          //     <View style={[styles.centerButton, { backgroundColor: colors.LP_Mainorange }]}>
-          //       <Image source={icon} style={[styles.icon, { tintColor: colors.LP_HeadingColor }]} />
-          //     </View>
-          //   );
-          // }
-
-          // return (
-          //   <View
-          //     style={[
-          //       styles.iconWrapper,
-          //       focused && { backgroundColor:  colors.LP_ButtomActiveTab },
-          //     ]}
-          //   >
-          //     <Image
-          //       source={icon}
-          //       style={[
-          //         styles.icon,
-          //         route.name === 'Profile'
-          //           ? {}
-          //           : { tintColor: focused ? colors.LP_Mainorange : colors.LP_HeadingColor }
-          //       ]}
-          //     />
-          //   </View>
-          // );
-
         },
-
         tabBarLabelStyle: {
           fontSize: rfSpacing['l'],
           fontWeight: '600',
@@ -162,16 +129,13 @@ export default function ButtomTAB() {
 
   );
 }
-
 const styles = StyleSheet.create({
-  
   centerButton: {
     width: rfSpacing['7xxmmll'],
     height: rfSpacing['7xxmmll'],
     borderRadius: rfSpacing['5xl'],
     justifyContent: 'center',
-    alignItems: 'center',
-    
+    alignItems: 'center', 
   },
   iconWrapper: {
     width: rfSpacing['7xl'],
