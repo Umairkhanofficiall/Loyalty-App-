@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, Pressable, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, Image, Pressable, ScrollView,StatusBar } from 'react-native'
 import React, { useState } from 'react';
 import LP_GetPoints from '../../../Ui/LP_GetPoints';
 import LP_FilterButton from '../../../Ui/LP_FilterButton';
@@ -7,6 +7,12 @@ import styles from '../../Auth/styles';
 
 const Points = () => {
   return (
+    <>
+    <StatusBar
+            translucent={false}
+            backgroundColor="white"
+            barStyle="dark-content"
+          />
     <View style={styles.containerPoints}>
       <ScrollView contentContainerStyle={styles.PB_9xml}>
        <LP_LoyaltyMainThree/>
@@ -19,6 +25,7 @@ const Points = () => {
         <LP_GetPoints />
       </ScrollView>
     </View>
+    </>
   )
 }
 export default Points

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, Pressable } from "react-native";
+import { View, Text} from "react-native";
 import LP_WhiteButton from "../../../Ui/LP_WhiteButton";
 import styles from "../../Auth/styles";
 import LP_ProfileDimScreen from "../../../Ui/LP_ProfileDimScreen";

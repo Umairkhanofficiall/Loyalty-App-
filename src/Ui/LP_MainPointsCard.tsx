@@ -24,7 +24,7 @@ const LP_MainPointsCard = () => {
       >
         <View>
           <View style={styles.FD_R}>
-            <Text style={styles.CL_5C6670_FS_L_FW_400_PT_XL_PL_XL}>
+            <Text style={styles.CL_RH_FS_L_FW_400_PT_XL_PL_XL}>
               Total Points Earned
             </Text>
             <Image
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   SUBCONTAINER: {
     height: rfSpacing['1.1H'],
     width: rfSpacing['3.05H'],
-    backgroundColor: "#FFCDC4",
+    backgroundColor:colors.LP_SubConBorderColor,
     alignSelf: "center",
     marginTop: rfSpacing['xl'],
     borderWidth: rfSpacing['xxxs'],
@@ -101,8 +101,8 @@ const styles = StyleSheet.create({
   FD_R: {
     flexDirection: "row",
   },
-  CL_5C6670_FS_L_FW_400_PT_XL_PL_XL: {
-    color: "#5C6670",
+  CL_RH_FS_L_FW_400_PT_XL_PL_XL: {
+    color: colors.LP_rememberhaed,
     fontSize: rfSpacing['l'],
     fontWeight: "400",
     paddingTop: rfSpacing['xl'],

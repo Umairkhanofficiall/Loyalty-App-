@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {View, Text, TouchableOpacity, FlatList, Image, Pressable, Modal} from 'react-native';
-import { getImage } from '../../../../assets/Images/images';
 import { useNavigation } from '@react-navigation/native';
 import LP_OrderSwipeButton from '../../../../Ui/LP_OrderSwipeButton';
 import styles from '../../../Auth/styles';
@@ -56,7 +55,7 @@ const OrderScreen = () => {
         setPaymentMethod={setPaymentMethod}
         isValid={!!isValid}
         onSubmit={() => setIsModalVisible(true)}
-        styles={styles}/>
+       />
         
        <LP_OrderSwipeButton
         status={status}
@@ -66,7 +65,7 @@ const OrderScreen = () => {
         setIsSecondModalVisible={setIsSecondModalVisible}
         handleSwipeSuccess={handleSwipeSuccess}
         navigation={navigation}
-        styles={styles}/>
+        />
     </View>
   );
 };

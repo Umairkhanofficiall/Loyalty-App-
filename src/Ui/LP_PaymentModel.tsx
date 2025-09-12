@@ -2,7 +2,6 @@ import { View, Text, Modal,TouchableOpacity } from 'react-native'
 import React from 'react'
 import FastImage from 'react-native-fast-image';
 import styles from '../screens/Auth/styles';
-import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 const LP_PaymentModel = () => {

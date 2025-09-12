@@ -4,6 +4,7 @@ import styles from '../screens/Auth/styles'
 import LP_LinearGradient from './LP_LinearGradient'
 import Search from '../assets/Images/SVGS/Search'
 import Bell from '../assets/Images/SVGS/Bell'
+import colors from '../theme/colors'
 
 
 const LP_ProfileDimScreen = () => {
@@ -11,7 +12,7 @@ const LP_ProfileDimScreen = () => {
     <View>
    <View style={styles.H_8XL}>
            <LP_LinearGradient
-             colors={["#FFFFFF", "#FFE9E5", "#E85D43"]}
+             colors={[colors.LP_White, colors.LP_Gradienttwo, colors.LP_Mainorange]}
              start={{ x: 0, y: 0 }}
              end={{ x: 1, y: 0 }}
              style={StyleSheet.absoluteFillObject}

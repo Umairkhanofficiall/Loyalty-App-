@@ -1,10 +1,11 @@
 import { Text, Pressable } from 'react-native';
 import React, { useState } from 'react';
 import styles from '../screens/Auth/styles';
+import colors from '../theme/colors';
 
 type Props = {
   onPress?: () => void;   
-  title: string;          // <-- naya prop
+  title: string; 
 };
 
 const LP_ButtonOrange = ({ onPress, title }: Props) => {
@@ -19,7 +20,7 @@ const LP_ButtonOrange = ({ onPress, title }: Props) => {
       <Text
         style={[
           styles.signin,
-          { backgroundColor: signInPressed ? '#de4e34ff' : '#f58d7aff' },
+          { backgroundColor: signInPressed ? colors.LP_Mainorange : colors.LP_ActiveOrange },
         ]}
       >
         {title}

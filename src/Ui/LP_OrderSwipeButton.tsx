@@ -3,10 +3,13 @@ import { View, Text, TouchableOpacity, Image, Modal } from 'react-native';
 import SwipeButton from 'rn-swipe-button';
 import ArrowModel from '../assets/Images/Order/ArrowModel';
 import LP_LottieButtonS from './LP_LottieButtonS';
-import ThirdModel from '../assets/Images/Order/ThirdModel';
 import { getImage } from '../assets/Images/images';
 import LP_OrderFModelDetail from './LP_OrderFModelDetail';
 import LP_OrderSModelDetail from './LP_OrderSModelDetail';
+import colors from '../theme/colors';
+import styles from '../screens/Auth/styles';
+import rfSpacing from '../theme/rfSpacing';
+
 
 type Props = {
   status: string;
@@ -16,7 +19,7 @@ type Props = {
   setIsSecondModalVisible: (val: boolean) => void;
   handleSwipeSuccess: () => void;
   navigation: any;
-  styles: any;
+  
 };
 
 const LP_OrderSwipeButton = ({
@@ -27,7 +30,7 @@ const LP_OrderSwipeButton = ({
   setIsSecondModalVisible,
   handleSwipeSuccess,
   navigation,
-  styles,
+ 
 }: Props) => (
   <>
     <Modal
@@ -41,16 +44,16 @@ const LP_OrderSwipeButton = ({
            <LP_OrderFModelDetail/>
           {status === "initial" && (
             <SwipeButton
-              height={55}
-              railBackgroundColor="#E85D43"
-              railBorderColor="#E85D43"
-              railFillBackgroundColor="#fffcfcff"
-              railFillBorderColor="#e43e3eff"
-              thumbIconBackgroundColor="#fff"
-              thumbIconBorderColor="#fff"
+              height={rfSpacing['7xl']}
+              railBackgroundColor={colors.LP_Mainorange}
+              railBorderColor={colors.LP_Mainorange}
+              railFillBackgroundColor={colors.LP_White}
+              railFillBorderColor={colors.LP_Mainorange}
+              thumbIconBackgroundColor={colors.LP_White}
+              thumbIconBorderColor={colors.LP_White}
               title="Slide to Confirm Order"
-              titleColor="#fff"
-              titleFontSize={15}
+              titleColor={colors.LP_White}
+              titleFontSize={rfSpacing['xl']}
               onSwipeSuccess={handleSwipeSuccess}
               thumbIconComponent={() => (
                 <View style={styles.ArrowModelContainer}>
@@ -74,8 +77,8 @@ const LP_OrderSwipeButton = ({
             style={styles.submitButton}
             onPress={() => setIsModalVisible(false)}
           >
-            <View style={{flexDirection:"row",alignItems:"center",justifyContent:"center",gap:10}}>
-              <Image source={getImage('rightface')} style={{width:20,height:20}} />
+            <View style={styles.FD_R_AI_C_JC_C_G_10}>
+              <Image source={getImage('rightface')} style={styles.W_3XL_H_3XL} />
               <Text style={styles.submitTextone}>Back</Text>
             </View>
           </TouchableOpacity>

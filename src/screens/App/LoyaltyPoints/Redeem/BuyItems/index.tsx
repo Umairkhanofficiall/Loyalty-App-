@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, FlatList, Image, Pressable, Modal, TextInput, StyleSheet } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { View, Text, FlatList, Image, Pressable } from "react-native";
 import styles from "../../../../Auth/styles";
 import LP_ListForBuyItems from "../../../../../Ui/LP_ListForBuyItems";
 import LP_BuyItemsGoBack from "../../../../../Ui/LP_BuyItemsGoBack";
 import LP_SearchComp from "../../../../../Ui/LP_SearchComp";
 const options = ["All Items ", "Beauty", "Food", "Gift Card"];
 const BuyItems = () => {
-  const navigation = useNavigation();
+
   const [search, setSearch] = useState("");
   const [activeOption, setActiveOption] = useState("All");
   return (

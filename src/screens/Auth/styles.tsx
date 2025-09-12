@@ -2,18 +2,23 @@ import { StyleSheet, Platform } from 'react-native';
 import { Dimensions } from 'react-native';
 import colors from '../../theme/colors';
 import rfSpacing from '../../theme/rfSpacing';
-import spacing from '../../theme/spacing';
 const windowwidth = Dimensions.get('window').width;
 const windowheight = Dimensions.get('window').height;
 
 export default StyleSheet.create({
+  //LOGIN SCREEN
   F1_JC_C_AI_C: {
     flex: rfSpacing['xxxs'],
     justifyContent: 'center',
     alignItems: 'center',
   },
+  W_28H_AS_C: {
+    width: rfSpacing['2.8H'],
+    alignSelf: "center"
+  },
+
   SubContainer: {
-    width: rfSpacing['3.7H'],
+    width: rfSpacing['3.5H'],
     height: rfSpacing['3.95H'],
     backgroundColor: colors.LP_signin,
     borderRadius: rfSpacing['4xl']
@@ -55,7 +60,7 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   checkmark: {
-    color: 'white',
+    color: colors.LP_White,
     fontSize: rfSpacing['m'],
     fontWeight: "bold",
     lineHeight: rfSpacing['m'],
@@ -133,10 +138,22 @@ export default StyleSheet.create({
     padding: rfSpacing['xxl']
   },
   card: {
-    width: rfSpacing['3.7H'],
+    width: rfSpacing['3.5H'],
     height: rfSpacing['5.1H'],
     backgroundColor: colors.LP_signin,
     borderRadius: rfSpacing['4xl']
+  },
+  FD_R_AS_C_W_17H_H_17H_BG_BGA_BR_XXL_MT_4XL:
+  {
+    flexDirection: "row", alignSelf: "center",
+    width: rfSpacing['1.7H'], height: rfSpacing['1.7H'],
+    backgroundColor: colors.LP_logobgauth,
+    borderRadius: rfSpacing['xxl'], marginTop: rfSpacing['4xl']
+  },
+  MH_XML_AS_C:
+  {
+    marginHorizontal: rfSpacing['xml'],
+    alignSelf: "center"
   },
 
   logo: {
@@ -146,15 +163,20 @@ export default StyleSheet.create({
   Text: {
     textAlign: "center",
     fontSize: rfSpacing['4xxm'],
-    color: 'black', fontWeight: "600",
+    color: colors.LP_HeadingColor, fontWeight: "600",
     marginTop: rfSpacing['4xl'],
     fontFamily: 'Plus Jakarta Sans'
   },
   subText: {
-    textAlign: "center", color: colors.LP_rememberhaed, marginTop: rfSpacing['4xl'], fontSize: rfSpacing['xxl']
+    textAlign: "center",
+    color: colors.LP_rememberhaed,
+    marginTop: rfSpacing['4xl'],
+    fontSize: rfSpacing['xxl']
   },
   subTexttwo: {
-    textAlign: "center", color: colors.LP_rememberhaed, fontSize: rfSpacing['xxl']
+    textAlign: "center",
+    color: colors.LP_rememberhaed,
+    fontSize: rfSpacing['xxl']
   },
   boxcontainer: {
     flexDirection: 'row',
@@ -197,7 +219,7 @@ export default StyleSheet.create({
   },
   resend: {
     fontSize: rfSpacing['l'],
-    color: 'black',
+    color: colors.LP_HeadingColor,
     fontWeight: '600',
   },
   loaderContainer: {
@@ -212,9 +234,9 @@ export default StyleSheet.create({
     zIndex: 10,
   },
   loaderBox: {
-    backgroundColor: 'white',
-    padding: 20,
-    borderRadius: 16,
+    backgroundColor: colors.LP_White,
+    padding: rfSpacing['3xl'],
+    borderRadius: rfSpacing['xl'],
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -229,6 +251,21 @@ export default StyleSheet.create({
     color: colors.LP_HeadingColor,
   },
   //home
+  PB_9XML: {
+    paddingBottom: rfSpacing['9xml']
+  },
+  F_1: {
+    flex: 1
+  },
+  MT_M: {
+    marginTop: rfSpacing['m']
+  },
+  FD_R: {
+    flexDirection: "row"
+  },
+  AS_C: {
+    alignSelf: "center"
+  },
   FD_R_AI_C: {
     flexDirection: "row",
     alignItems: "center"
@@ -238,172 +275,96 @@ export default StyleSheet.create({
     alignSelf: "center"
   },
   C_B_FS_FW_PL_PT: {
-    color: "black", fontSize: 20, fontWeight: "600", paddingLeft: 20, paddingTop: 40
+    color: colors.LP_HeadingColor,
+    fontSize: rfSpacing['4xl'],
+    fontWeight: "600",
+    paddingLeft: rfSpacing['3xl'],
+    paddingTop: rfSpacing['5xxml']
   },
   C_PF: {
     color: colors.LP_NaturalGray,
     paddingLeft: rfSpacing['3xl']
   },
   C_FS_TA_FW: {
-    color: "black", fontSize: 48, textAlign: "center", fontWeight: "600"
+    color: colors.LP_HeadingColor,
+    fontSize: rfSpacing['6xssml'],
+    textAlign: "center",
+    fontWeight: "600"
   },
   H_W_BR_ML_MT: {
-    height: rfSpacing['xmml'], width: rfSpacing['7xmml'], borderRadius: rfSpacing['xs'], marginLeft: rfSpacing['3xl'], marginTop: rfSpacing['xl']
+    height: rfSpacing['xmml'],
+    width: rfSpacing['7xmml'],
+    borderRadius: rfSpacing['xs'],
+    marginLeft: rfSpacing['3xl'],
+    marginTop: rfSpacing['xl']
   },
   FS_TA_C_PT: {
-    fontSize: rfSpacing['s'], textAlign: "center", color: colors.LP_HeadingColor, paddingTop: rfSpacing['xxs']
+    fontSize: rfSpacing['s'],
+    textAlign: "center",
+    color: colors.LP_HeadingColor,
+    paddingTop: rfSpacing['xxs']
   },
   C_FS_FW_PL_PT: {
-    color: "black", fontSize: 24, fontWeight: "600", paddingLeft: 20, paddingTop: 10
+    color: colors.LP_HeadingColor,
+    fontSize: rfSpacing['4xxml'],
+    fontWeight: "600",
+    paddingLeft: rfSpacing['3xl'],
+    paddingTop: rfSpacing['m']
   },
   C_ML_MT_FS_FW: {
-    color: 'gray', marginLeft: 20, marginTop: 16, fontSize: 12, fontWeight: "400"
+    color: colors.LP_NaturalGray,
+    marginLeft: rfSpacing['3xl'],
+    marginTop: rfSpacing['l'],
+    fontSize: rfSpacing['l'],
+    fontWeight: "400"
   },
   C_MT_ML_FS_FW: {
-    color: "black", marginTop: 16, marginLeft: 175, fontSize: 12, fontWeight: "400"
+    color: colors.LP_HeadingColor,
+    marginTop: rfSpacing['xml'],
+    marginLeft: rfSpacing['1.5H'],
+    fontSize: rfSpacing['l'],
+    fontWeight: "400"
   },
   W_H: {
-    height: 8, width: 76.3
+    height: rfSpacing['s'],
+    width: rfSpacing['8xl']
   },
   TA_C_FS_FW_MT: {
-    textAlign: "center", color: "gray", fontSize: 12, fontWeight: "400", marginTop: 16
+    textAlign: "center",
+    color: colors.LP_NaturalGray,
+    fontSize: rfSpacing['mll'],
+    fontWeight: "400",
+    marginTop: rfSpacing['xl']
   },
   C_PT_PL_FS: {
-    color: "gray", paddingTop: 15, paddingLeft: 15, fontSize: 14
+    color:colors.LP_NaturalGray,
+    paddingTop: rfSpacing['xl'],
+    paddingLeft:  rfSpacing['l'],
+    fontSize:  rfSpacing['xl']
   },
   C_PT_PL_FS_FW: {
-    color: "black", paddingTop: 5, paddingLeft: 15, fontSize: 20, fontWeight: "600"
+    color: colors.LP_HeadingColor,
+    paddingTop:  rfSpacing['xs'],
+    paddingLeft:  rfSpacing['xl'],
+    fontSize:  rfSpacing['3xl'],
+    fontWeight: "600"
   },
   H_W_ML_MT: {
-    height: 40, width: 40, marginLeft: 170, marginTop: 20
+    height: rfSpacing['5xxml'],
+    width: rfSpacing['5xxml'],
+    marginLeft: rfSpacing['1.6H'],
+    marginTop: rfSpacing['3xl']
   },
   FD_R_MT_MR: {
-    flexDirection: "row", marginTop: 25, marginLeft: 170,
+    flexDirection: "row",
+    marginTop: rfSpacing['4xxml'],
+    marginLeft: rfSpacing['1.6H'],
   },
   H_W_ML_S_MT_XXS: {
-    height: 25, width: 25, marginLeft: -rfSpacing['s'], marginTop: -rfSpacing['xxs']
-  },
-
-  //points
-  W_385H_H_2H_BG_MO_BBR_4XL_BBSR_4XL: {
-    width: rfSpacing['3.85H'],
-    height: rfSpacing['2H'],
-    backgroundColor: colors.LP_Mainorange,
-    borderBottomEndRadius: rfSpacing['4xl'],
-    borderBottomStartRadius: rfSpacing['4xl'],
-  },
-  C_W_FS_4XL_TA_C_MT_4XXM: {
-    color: colors.LP_White,
-    fontSize: rfSpacing['4xl'],
-    textAlign: "center",
-    marginTop: rfSpacing['4xxm']
-  },
-
-  iconWrapper: {
-    height: 40,
-    width: 40,
-    borderRadius: 20,
-    backgroundColor: "#feb9a6ff",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 10,
-    marginRight: 10,
-    elevation: 4
-
-  },
-  icon: {
-    height: 30,
-    width: 30,
-    top: -30,
-    left: -20,
-    position: "static"
-  },
-  text: {
-    color: "gray",
-    textAlign: "center",
-    paddingTop: 60
-  },
-  container2: {
-    width: 370,
-    height: 285,
-    margin: 20,
-    borderRadius: 20,
-    backgroundColor: "white",
-    elevation: 3,
-  },
-  silver: {
-    width: 60,
-    height: 60,
-    marginLeft: 200,
-    marginTop: 16,
-    resizeMode: "contain"
-  },
-  subcontainer: {
-    height: 85,
-    width: 327,
-    backgroundColor: "#f3f3f3ff",
-    marginLeft: 20,
-    marginTop: 13,
-    borderRadius: 16
-  },
-  container3: {
-    width: "100%",
-    height: 368,
-    backgroundColor: "white",
-    borderRadius: 24
-  },
-  buttonText: {
-    fontSize: 12,
-    fontWeight: "600",
-    color: "black",
-
-  },
-  button: {
-    width: 50,
-    height: 20,
-  },
-  gif: {
-    height: rfSpacing['6xssml'],
-    width: rfSpacing['6xssml'],
-    backgroundColor: colors.LP_Mainlightorange,
-    borderRadius: rfSpacing['5xl'],
-    alignItems: "center",
-    justifyContent: "center",
-    marginLeft: 30,
-
-  },
-  subcontainer3: {
-    width: rfSpacing['3.35H'],
-    height: rfSpacing['8xl'],
-    backgroundColor: "white",
-    borderWidth: rfSpacing['xxxs'],
-    borderColor: colors.LP_inputborder,
-    marginLeft: rfSpacing['4xxsl'],
-    marginTop: rfSpacing['xl'],
-    borderRadius: rfSpacing['xl']
-
-  },
-  iconWrapper3: {
-    height: rfSpacing['4xxsl'],
-    width: rfSpacing['4xxsl'],
-    borderRadius: rfSpacing['4xl'],
-    backgroundColor: colors.LP_Starwrap,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: rfSpacing['m'],
-  },
-
-  // POints Screen
-  BG_F_1: {
-    backgroundColor: colors.LP_Pointsbgcolor,
-    flex: 1,
-  },
-  PB_1_6H: {
-    paddingBottom: rfSpacing['1.6H'],
-  },
-
-  containerHistory: {
-    backgroundColor: colors.LP_Pointsbgcolor,
+    height: rfSpacing['4xxml'],
+    width: rfSpacing['4xxml'],
+    marginLeft: -rfSpacing['s'],
+    marginTop: -rfSpacing['xxs']
   },
 
   //Order Receive
@@ -412,12 +373,17 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: colors.LP_IconBG,
   },
+  PB_XXXS_BG_ICONBG:
+  {
+    paddingBottom: rfSpacing['xxxs'],
+    backgroundColor: colors.LP_IconBG
+  },
   W_3_H_9_BG_W_BW_XXXS_BC_LO_MT_XXL_BR_XXL_AS_C: {
     width: rfSpacing['3.35H'],
     height: rfSpacing['95l'],
     backgroundColor: colors.LP_White,
     borderWidth: rfSpacing['xxxs'],
-    borderColor: "#dbd9d9ff",
+    borderColor:colors.LP_OrderReciveBorderColor,
     marginTop: rfSpacing['xxl'],
     borderRadius: rfSpacing['xxl'],
     alignSelf: "center"
@@ -511,10 +477,134 @@ export default StyleSheet.create({
     width: rfSpacing['3.37H'],
     height: rfSpacing['3.7H'],
     borderWidth: rfSpacing['xxxs'],
-    borderColor: '#ccc',
+    borderColor: colors.LP_SignatureImageBorder,
     marginTop: rfSpacing['3xl'],
     alignSelf: "center",
   },
+
+  //points
+  W_385H_H_2H_BG_MO_BBR_4XL_BBSR_4XL: {
+    width: rfSpacing['3.85H'],
+    height: rfSpacing['2H'],
+    backgroundColor: colors.LP_Mainorange,
+    borderBottomEndRadius: rfSpacing['4xl'],
+    borderBottomStartRadius: rfSpacing['4xl'],
+  },
+  C_W_FS_4XL_TA_C_MT_4XXM: {
+    color: colors.LP_White,
+    fontSize: rfSpacing['4xl'],
+    textAlign: "center",
+    marginTop: rfSpacing['4xxm']
+  },
+
+  iconWrapper: {
+    height: rfSpacing['5xxml'],
+    width: rfSpacing['5xxml'],
+    borderRadius: rfSpacing['3xl'],
+    backgroundColor: colors.LP_HomeIconWrapper,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: rfSpacing['m'],
+    marginRight: rfSpacing['m'],
+    elevation: rfSpacing['xms']
+
+  },
+  icon: {
+    height: rfSpacing['4xxll'],
+    width: rfSpacing['4xxll'],
+    top: -rfSpacing['4xxll'],
+    left: -rfSpacing['3xl'],
+    position: "static"
+  },
+  text: {
+    color: colors.LP_NaturalGray,
+    textAlign: "center",
+    paddingTop: rfSpacing['7xmml']
+  },
+  container2: {
+    width:rfSpacing['3.4H'],
+    height:rfSpacing['2.6H'],
+    margin: rfSpacing['3xl'],
+    borderRadius: rfSpacing['3xl'],
+    backgroundColor: colors.LP_White,
+    elevation: rfSpacing['xms'],
+  },
+  silver: {
+    width: rfSpacing['7xxmmll'],
+    height: rfSpacing['7xxmmll'],
+    marginLeft: rfSpacing['1.85H'],
+    marginTop: rfSpacing['xl'],
+    resizeMode: "contain"
+  },
+  subcontainer: {
+    height: rfSpacing['9xl'],
+    width: rfSpacing['3.10H'],
+    backgroundColor: colors.LP_HomeContainer,
+    marginLeft: rfSpacing['3xl'],
+    marginTop: rfSpacing['l'],
+    borderRadius: rfSpacing['xl']
+  },
+  container3: {
+    width: "100%",
+    height: rfSpacing['3.5H'],
+    backgroundColor:colors.LP_White,
+    borderRadius: rfSpacing['4xxml']
+  },
+  buttonText: {
+    fontSize: rfSpacing['l'],
+    fontWeight: "600",
+    color:colors.LP_HeadingColor,
+
+  },
+  button: {
+    width: rfSpacing['6xsl'],
+    height: rfSpacing['3xl'],
+  },
+  gif: {
+    height: rfSpacing['6xssml'],
+    width: rfSpacing['6xssml'],
+    backgroundColor: colors.LP_Mainlightorange,
+    borderRadius: rfSpacing['5xl'],
+    alignItems: "center",
+    justifyContent: "center",
+    marginLeft: rfSpacing['4xxll'],
+
+  },
+  subcontainer3: {
+    width: rfSpacing['3.35H'],
+    height: rfSpacing['8xl'],
+    backgroundColor: colors.LP_White,
+    borderWidth: rfSpacing['xxxs'],
+    borderColor: colors.LP_inputborder,
+    marginLeft: rfSpacing['4xxsl'],
+    marginTop: rfSpacing['xl'],
+    borderRadius: rfSpacing['xl']
+
+  },
+  iconWrapper3: {
+    height: rfSpacing['4xxsl'],
+    width: rfSpacing['4xxsl'],
+    borderRadius: rfSpacing['4xl'],
+    backgroundColor: colors.LP_Starwrap,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: rfSpacing['m'],
+  },
+
+  // POints Screen
+  BG_F_1: {
+    backgroundColor: colors.LP_Pointsbgcolor,
+    flex: 1,
+  },
+  PB_1_6H: {
+    paddingBottom: rfSpacing['1.6H'],
+  },
+
+  containerHistory: {
+    backgroundColor: colors.LP_Pointsbgcolor,
+  },
+
+
 
   //REdeem Screen
 
@@ -563,7 +653,7 @@ export default StyleSheet.create({
     height: rfSpacing['7xl'],
     backgroundColor: colors.LP_Gradienttwo,
     borderRadius: rfSpacing['5xl'],
-    marginLeft: 16
+    marginLeft: rfSpacing['xl']
   },
   IconItem: {
     alignSelf: "center",
@@ -581,7 +671,7 @@ export default StyleSheet.create({
   },
   //BuyItems screen 
 
-  F_1_BG_F6F6F6: { flex: 1, backgroundColor: "#f6f6f6" },
+  F_1_BG_F6F6F6: { flex: 1, backgroundColor: colors.LP_BuyItemBG },
   P_M_FD_R_GAP_M_MT_XXL: {
     padding: rfSpacing.m,
     flexDirection: "row",
@@ -595,7 +685,7 @@ export default StyleSheet.create({
   FS_4XL_FW_700_CL_222: {
     fontSize: rfSpacing["4xl"],
     fontWeight: "700",
-    color: "#222",
+    color: colors.LP_BuyItemcolor,
   },
   W_94P_H_7XL_M_XL_AS_C_FD_R_AI_C_BW_1_BC_CCC_BR_8_BG_W: {
     width: "94%",
@@ -605,9 +695,9 @@ export default StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: colors.LP_SignatureImageBorder,
     borderRadius: 8,
-    backgroundColor: "#fff",
+    backgroundColor: colors.LP_White,
   },
   PH_16: { paddingHorizontal: 16 },
   ML_25H: { marginLeft: rfSpacing["2.5H"] },
@@ -621,7 +711,7 @@ export default StyleSheet.create({
     paddingHorizontal: rfSpacing.l,
     borderRadius: rfSpacing["4xl"],
   },
-  BG_FF: { backgroundColor: "#ffffffff" },
+  BG_FF: { backgroundColor: colors.LP_White },
   FS_L_CL_NG: {
     fontSize: rfSpacing.l,
     color: colors.LP_NaturalGray,
@@ -636,7 +726,7 @@ export default StyleSheet.create({
   },
   P_L: { padding: rfSpacing.l },
   CARD_BG_W_BR_M_P_M_MB_M_F_047_E_2: {
-    backgroundColor: "#fff",
+    backgroundColor: colors.LP_White,
     borderRadius: rfSpacing.m,
     padding: rfSpacing.m,
     marginBottom: rfSpacing.m,
@@ -651,14 +741,14 @@ export default StyleSheet.create({
   MT_XL_FS_XM_CL_333: {
     marginTop: rfSpacing.xl,
     fontSize: rfSpacing.xm,
-    color: "#333",
+    color: colors.LP_BuyItemGray,
   },
   FD_R_MT_XL_BG_W_BW_1_BC_DDD_BR_S_PV_S_AI_C_PL_4XML: {
     flexDirection: "row",
     marginTop: rfSpacing.xl,
-    backgroundColor: "#fff",
+    backgroundColor: colors.LP_White,
     borderWidth: 1,
-    borderColor: "#ddd",
+    borderColor: colors.LP_BuyItemList,
     borderRadius: rfSpacing.s,
     paddingVertical: rfSpacing.s,
     alignItems: "center",
@@ -666,7 +756,7 @@ export default StyleSheet.create({
   },
   FS_XL_CL_333_MT_NXXS: {
     fontSize: rfSpacing.xl,
-    color: "#333",
+    color: colors.LP_BuyItemGray,
     marginTop: -rfSpacing.xxs,
   },
   H_4XXSL_W_4XXSL_BR_4XL_BG_STARWRAP: {
@@ -689,7 +779,7 @@ export default StyleSheet.create({
     justifyContent: "flex-end",
   },
   BG_W_BTLR_L_BTRR_L_P_L: {
-    backgroundColor: "#fff",
+    backgroundColor: colors.LP_White,
     borderTopLeftRadius: rfSpacing.l,
     borderTopRightRadius: rfSpacing.l,
     padding: rfSpacing.l,
@@ -713,7 +803,7 @@ export default StyleSheet.create({
   FS_XXL_FW_600_CL_222_MB_S: {
     fontSize: rfSpacing.xxl,
     fontWeight: "600",
-    color: "#222",
+    color: colors.LP_BuyItemcolor,
     marginBottom: rfSpacing.s,
   },
   FS_XL_FW_BOLD_MT_S_MB_XS_CL_HC: {
@@ -725,7 +815,7 @@ export default StyleSheet.create({
   },
   FS_XL_CL_555_MB_L: {
     fontSize: rfSpacing.xl,
-    color: "#555",
+    color: colors.LP_Buyitemsbg,
     marginBottom: rfSpacing.l,
   },
   W_35H_H_6XML_BW_XXXS_BR_XL_FD_R_BC_BORDER_PT_L: {
@@ -878,9 +968,6 @@ export default StyleSheet.create({
     fontWeight: '600',
     color: colors.LP_HeadingColor,
   },
-  MT_M: {
-    marginTop: rfSpacing['m'],
-  },
   BG_W_BR_M_P_M_MB_M_CL_HC: {
     backgroundColor: colors.LP_White,
     borderRadius: rfSpacing['m'],
@@ -968,7 +1055,7 @@ export default StyleSheet.create({
   },
   BBW_XXXS_BBC_E4EBF0_MV_M_MT_XXL: {
     borderBottomWidth: rfSpacing['xxxs'],
-    borderBottomColor: '#E4EBF0',
+    borderBottomColor: colors.LP_Searchcolor,
     marginVertical: rfSpacing['m'],
     marginTop: rfSpacing['xxl'],
   },
@@ -988,7 +1075,7 @@ export default StyleSheet.create({
   },
 
   //Scanbar 
-  F_1: { flex: 1 },
+
   TA_C_PT_4XLL_FS_4XL_CL_W: {
     textAlign: "center",
     paddingTop: rfSpacing['4xll'],
@@ -1015,7 +1102,7 @@ export default StyleSheet.create({
     marginTop: rfSpacing['7xl']
   },
   CL_W_MT_10XL_W_2_5H_H_4XXLL_BW_XXXS_BR_ML_BC_W_TA_C_PT_XMS: {
-    color: '#fff',
+    color: colors.LP_White,
     marginTop: rfSpacing['10xl'],
     width: rfSpacing['2.5H'],
     height: rfSpacing['4xxll'],
@@ -1106,7 +1193,7 @@ export default StyleSheet.create({
   POINTS_VALUE: {
     fontSize: rfSpacing['4xll'],
     fontWeight: 'bold',
-    color: '#000000ff',
+    color: colors.LP_HeadingColor,
     textAlign: "center",
     marginTop: rfSpacing['xl'],
     marginLeft: rfSpacing['m']
@@ -1128,7 +1215,7 @@ export default StyleSheet.create({
     paddingLeft: rfSpacing['1.1H']
   },
   MODAL_BUTTON: {
-    backgroundColor: '#E85D43',
+    backgroundColor: colors.LP_Mainorange,
     padding: rfSpacing['l'],
     borderRadius: rfSpacing['7xl'],
     width: rfSpacing['3.05H'],
@@ -1140,7 +1227,7 @@ export default StyleSheet.create({
     flexDirection: "row"
   },
   MODAL_BUTTON_TEXT: {
-    color: '#fff',
+    color: colors.LP_White,
     fontSize: rfSpacing['xxl'],
     fontWeight: "600"
   },
@@ -1160,7 +1247,7 @@ export default StyleSheet.create({
     marginVertical: rfSpacing['xs']
   },
   MODAL_BUTTON_TEXT_TWO: {
-    color: 'black',
+    color: colors.LP_HeadingColor,
     fontSize: rfSpacing['xxl'],
     fontWeight: "600",
     paddingLeft: rfSpacing['3xl']
@@ -1176,10 +1263,11 @@ export default StyleSheet.create({
 
   // Profile Screen
 
-  F_1_BG_W: { flex: 1, backgroundColor: "white" },
+  F_1_BG_W: { flex: 1, backgroundColor: colors.LP_White
+   },
   H_8XL: { height: rfSpacing['1.93H'] },
   CL_B_FS_3XL_FW_600_PL_3XL_PT_5XXML: {
-    color: "black",
+    color: colors.LP_HeadingColor,
     fontSize: rfSpacing['3xl'],
     fontWeight: "600",
     paddingLeft: rfSpacing['3xl'],
@@ -1193,7 +1281,7 @@ export default StyleSheet.create({
     height: rfSpacing['5xxml'],
     width: rfSpacing['5xxml'],
     borderRadius: rfSpacing['3xl'],
-    backgroundColor: "#feb9a6ff",
+    backgroundColor: colors.LP_HomeIconWrapper,
     justifyContent: "center",
     alignItems: "center",
     marginTop: rfSpacing['m'],
@@ -1223,7 +1311,9 @@ export default StyleSheet.create({
   },
   FD_R_MT_5XL: { flexDirection: "row", marginTop: rfSpacing['5xl'] },
   ML_S: { marginLeft: rfSpacing['s'] },
-  FD_R: { flexDirection: "row" },
+
+
+
   NameText: {
     color: colors.LP_HeadingColor,
     fontSize: rfSpacing['xxl'],
@@ -1260,7 +1350,7 @@ export default StyleSheet.create({
   },
   DIVIDER: {
     borderBottomWidth: rfSpacing['xxxs'],
-    borderBottomColor: '#E4EBF0',
+    borderBottomColor: colors.LP_Searchcolor,
     marginVertical: rfSpacing['s'],
     paddingTop: rfSpacing['xs'],
   },
@@ -1347,6 +1437,19 @@ export default StyleSheet.create({
     backgroundColor: colors.LP_IconBG,
     flex: 1,
   },
+  Arrowdownicon: {
+    width:rfSpacing['4xxll'],
+    height: rfSpacing['4xxll'],
+    resizeMode: "contain",
+    top: -rfSpacing['4xxsl'],
+    left: rfSpacing['2.95H']
+  },
+  updownicon: {
+    width: rfSpacing['3xl'],
+    height: rfSpacing['3xl'],
+    resizeMode: "contain"
+  },
+
 
   FS_3XL_FW_600_MB_3XL_ML_S_CL_HC: {
     fontSize: rfSpacing['3xl'],
@@ -1421,14 +1524,14 @@ export default StyleSheet.create({
     elevation: rfSpacing['xxxs'],
     borderRadius: rfSpacing['xss'],
     marginTop: rfSpacing['xss'],
-    backgroundColor: "white",
+    backgroundColor: colors.LP_White,
   },
   dropdownText: {
-    color: '#444',
+    color:colors.LP_PlaceOrderDropdown,
     marginTop: rfSpacing['xxs'],
   },
   dropdownList: {
-    borderColor: '#ccc',
+    borderColor: colors.LP_SignatureImageBorder,
     elevation: rfSpacing['xxs'],
     borderRadius: rfSpacing['xss'],
     maxHeight: rfSpacing['1.42H'],
@@ -1436,7 +1539,7 @@ export default StyleSheet.create({
   dropdownItem: {
     padding: rfSpacing['m'],
     borderBottomWidth: rfSpacing['xxxs'],
-    borderBottomColor: '#eee',
+    borderBottomColor: colors.LP_placeorderDropdownItems,
   },
   dropdownItemText: {
     color: colors.LP_HeadingColor,
@@ -1451,7 +1554,7 @@ export default StyleSheet.create({
     paddingVertical: rfSpacing['s'],
     marginTop: rfSpacing['xss'],
     justifyContent: 'space-between',
-    backgroundColor: "white",
+    backgroundColor: colors.LP_White,
     height: rfSpacing['6xsl'],
   },
   cartonInputText: {
@@ -1476,7 +1579,7 @@ export default StyleSheet.create({
     borderRadius: rfSpacing['xss'],
   },
   radioButtonSelected: {
-    backgroundColor: '#eee',
+    backgroundColor: colors.LP_placeorderDropdownItems,
     borderColor: colors.LP_Mainorange,
   },
   radioText: {
@@ -1493,7 +1596,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: rfSpacing['xss'],
-    backgroundColor: 'white',
+    backgroundColor: colors.LP_White,
     height: rfSpacing['6xsl'],
     borderRadius: rfSpacing['xss'],
     paddingHorizontal: rfSpacing['xl'],
@@ -1504,7 +1607,7 @@ export default StyleSheet.create({
     width: rfSpacing['xl'],
     borderRadius: rfSpacing['s'],
     borderWidth: rfSpacing['xxs'],
-    borderColor: '#999',
+    borderColor:colors.LP_RadioCircle,
     marginRight: rfSpacing['s'],
   },
   radioSelected: {
@@ -1536,7 +1639,7 @@ export default StyleSheet.create({
     backgroundColor: colors.LP_Mainorange,
   },
   disabledButton: {
-    backgroundColor: '#F1F6F9',
+    backgroundColor:colors.LP_Shadeofwhite,
   },
   submitText: {
     color: colors.LP_White,
@@ -1553,7 +1656,7 @@ export default StyleSheet.create({
     right: 0,
     backgroundColor: colors.LP_White,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: colors.LP_SignatureImageBorder,
     borderRadius: rfSpacing['xss'],
     maxHeight: rfSpacing['1.45H'],
     zIndex: 999,
@@ -1561,7 +1664,7 @@ export default StyleSheet.create({
   container4: {
     width: rfSpacing['3.35H'],
     flexDirection: 'row',
-    backgroundColor: '#E5E7EB',
+    backgroundColor: colors.LP_PlaceOrderContainer4,
     borderRadius: rfSpacing['6xsl'],
     padding: rfSpacing['xms'],
     alignSelf: 'center',
@@ -1573,14 +1676,14 @@ export default StyleSheet.create({
     borderRadius: rfSpacing['6xsl'],
   },
   textOrderUnit: {
-    color: '#6B7280',
+    color: colors.LP_Tabtext,
     fontSize: rfSpacing['xl'],
   },
   hoverText: {
     color: colors.LP_HeadingColor,
   },
   activeText: {
-    color: '#E85D43',
+    color: colors.LP_Mainorange,
   },
   modalBackground: {
     flex: 1,
@@ -1591,7 +1694,7 @@ export default StyleSheet.create({
   modalContainer: {
     width: rfSpacing['3.4H'],
     height: rfSpacing['5.1H'],
-    backgroundColor: 'white',
+    backgroundColor: colors.LP_White,
     padding: rfSpacing['3xl'],
     borderRadius: rfSpacing['s'],
     elevation: rfSpacing['s'],
@@ -1599,7 +1702,7 @@ export default StyleSheet.create({
   modalContainertwo: {
     width: rfSpacing['3.35H'],
     height: rfSpacing['3.95H'],
-    backgroundColor: 'white',
+    backgroundColor: colors.LP_White,
     padding: rfSpacing['3xl'],
     borderRadius: rfSpacing['s'],
     elevation: 5,
@@ -1608,7 +1711,7 @@ export default StyleSheet.create({
     color: colors.LP_HeadingColor,
   },
   leftsidetext: {
-    color: "#5C6670",
+    color: colors.LP_rememberhaed,
     fontSize: rfSpacing['m'],
     fontWeight: "400",
     marginLeft: rfSpacing['s'],
@@ -1624,7 +1727,7 @@ export default StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#ffe6e1",
+    backgroundColor:colors.LP_LoadingBTNColor,
     padding: rfSpacing['xl'],
     borderRadius: rfSpacing['7xl'],
     marginTop: rfSpacing['m'],
@@ -1634,16 +1737,26 @@ export default StyleSheet.create({
     fontSize: rfSpacing['xl'],
   },
   successBtn: {
-    backgroundColor: "#32CD32",
+    backgroundColor: colors.LP_LightGreen,
     padding: rfSpacing['xl'],
     borderRadius: rfSpacing['7xl'],
     marginTop: rfSpacing['m'],
     alignItems: "center",
   },
   successText: {
-    color: "#fff",
+    color:colors.LP_White,
     fontSize: rfSpacing['xl'],
     fontWeight: "bold",
+  },
+  FD_R_AI_C_JC_C_G_10: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: rfSpacing['m']
+  },
+  W_3XL_H_3XL: {
+    width: rfSpacing['3xl'],
+    height: rfSpacing['3xl'],
   },
   OrderConfirmationText: {
     fontSize: rfSpacing['3xl'],
@@ -1653,7 +1766,7 @@ export default StyleSheet.create({
   OrderDetailsContainer: {
     width: rfSpacing['3.10H'],
     height: rfSpacing['1.93H'],
-    backgroundColor: "#F1F6F9",
+    backgroundColor: colors.LP_Shadeofwhite,
     borderRadius: rfSpacing['xl'],
     top: rfSpacing['s'],
     alignSelf: "center",
@@ -1692,16 +1805,16 @@ export default StyleSheet.create({
   },
   BorderBottom: {
     borderBottomWidth: 1,
-    borderBottomColor: '#E4EBF0',
+    borderBottomColor: colors.LP_Searchcolor,
     marginVertical: rfSpacing['s'],
   },
   BorderBottomXS: {
     borderBottomWidth: rfSpacing['xxxs'],
-    borderBottomColor: '#E4EBF0',
+    borderBottomColor:colors.LP_Searchcolor,
     marginVertical: rfSpacing['s'],
   },
   OrderAmountText: {
-    color: "#5C6670",
+    color: colors.LP_rememberhaed,
     fontSize: rfSpacing['mll'],
     fontWeight: "400",
   },
@@ -1711,7 +1824,7 @@ export default StyleSheet.create({
     fontWeight: "600",
   },
   TaxFeeText: {
-    color: "#5C6670",
+    color: colors.LP_rememberhaed,
     fontSize: rfSpacing['mll'],
     fontWeight: "400",
   },
@@ -1721,17 +1834,17 @@ export default StyleSheet.create({
     fontWeight: "600",
   },
   TotalAmountText: {
-    color: "#5C6670",
+    color:colors.LP_rememberhaed,
     fontSize: rfSpacing['xxl'],
     fontWeight: "400",
   },
   TotalAmountValueText: {
-    color: "#E85D43",
+    color: colors.LP_Mainorange,
     fontSize: rfSpacing['3xl'],
     fontWeight: "600",
   },
   ArrowModelContainer: {
-    backgroundColor: "#fff",
+    backgroundColor: colors.LP_White,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -1759,7 +1872,7 @@ export default StyleSheet.create({
     flexDirection: "row",
     width: rfSpacing['2.25H'],
     height: rfSpacing['4xxm'],
-    backgroundColor: "#E4EBF0",
+    backgroundColor:colors.LP_Searchcolor,
     alignSelf: "center",
     marginTop: rfSpacing['4xl'],
     top: -rfSpacing['3xl'],
@@ -1778,7 +1891,7 @@ export default StyleSheet.create({
   },
   DoneButton: {
     marginTop: rfSpacing['4xl'],
-    backgroundColor: 'white',
+    backgroundColor: colors.LP_White,
     top: -rfSpacing['3xl'],
   },
 
@@ -1799,11 +1912,11 @@ export default StyleSheet.create({
 
 
   // MyOrder Screen
-    BG_F_xxxs: {
-    backgroundColor: '#f2f3f6',
+  BG_F_xxxs: {
+    backgroundColor:colors.LP_Pointsbgcolor,
     flex: rfSpacing['xxxs'],
   },
-  
+
   H_6XSL_W_6XSL_ML_310H_MT_135H: {
     height: rfSpacing['6xsl'],
     width: rfSpacing['6xsl'],

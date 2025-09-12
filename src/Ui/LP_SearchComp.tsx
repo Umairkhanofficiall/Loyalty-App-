@@ -3,6 +3,7 @@ import React from 'react'
 import styles from '../screens/Auth/styles';
 import Search from '../assets/Images/SVGS/Search';
 import { useState } from 'react';
+import colors from '../theme/colors';
 const LP_SearchComp = () => {
       const [search, setSearch] = useState("");
   return (
@@ -11,7 +12,7 @@ const LP_SearchComp = () => {
               value={search}
               onChangeText={setSearch}
               placeholder="Search"
-              placeholderTextColor="#888"
+              placeholderTextColor={colors.LP_SearchPlaceholdertext}
               style={styles.PH_16}
             />
             <Search style={styles.ML_25H} />

@@ -1,9 +1,8 @@
-import { StyleSheet, Text, View, Pressable, Image, ScrollView, FlatList } from 'react-native'
+import { Text, View, Pressable, Image, FlatList } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { getImage } from '../../../../assets/Images/images'
-import rfSpacing from '../../../../theme/rfSpacing'
-import colors from '../../../../theme/colors'
+
 import styles from '../../../Auth/styles'
 import LP_BuyItemsGoBack from '../../../../Ui/LP_BuyItemsGoBack'
 const OrderReceive = () => {
@@ -85,7 +84,7 @@ const OrderReceive = () => {
             </View>
           </Pressable>
         )}
-        contentContainerStyle={{ paddingBottom: rfSpacing['xxxs'], backgroundColor: colors.LP_IconBG }}
+        contentContainerStyle={styles.PB_XXXS_BG_ICONBG}
       />
     </View>
   )

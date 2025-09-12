@@ -4,7 +4,6 @@ import rfSpacing from '../theme/rfSpacing';
 import colors from '../theme/colors';
 import LinearGradient from 'react-native-linear-gradient';
 import { getImage } from '../assets/Images/images';
-
 const L_P_LevelsContainer2 = () => {
     return (
         <View style={styles.W_335H_H_4_1H_BG_W_BR_4XL_L_4XXSL_T_6XL}>

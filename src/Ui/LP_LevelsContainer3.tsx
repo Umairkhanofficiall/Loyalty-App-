@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     height: rfSpacing['1H'],
     marginLeft: rfSpacing['4xll'],
     borderRadius: rfSpacing['xxl'],
-    backgroundColor: '#F1F6F9',
+    backgroundColor: colors.LP_Shadeofwhite,
   },
   CL_HC_ML_3XL_FS_3XL_FW_600: {
     color: colors.LP_HeadingColor,
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     height: rfSpacing['10xl'],
     marginLeft: rfSpacing['4xll'],
     borderRadius: rfSpacing['xxl'],
-    backgroundColor: '#F1F6F9',
+    backgroundColor:colors.LP_Shadeofwhite,
   },
     C_B_FS_XXL_FW_6_MT_4xxsl_L_4XL: {
       color: colors.LP_HeadingColor,

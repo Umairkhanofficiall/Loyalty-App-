@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   SUBCONTAINER3: {
     width: rfSpacing['3.35H'],
     height: rfSpacing['8xl'],
-    backgroundColor: "white",
+    backgroundColor:colors.LP_White,
     borderWidth: rfSpacing['xxxs'],
     borderColor: colors.LP_inputborder,
     marginLeft: rfSpacing['4xxsl'],

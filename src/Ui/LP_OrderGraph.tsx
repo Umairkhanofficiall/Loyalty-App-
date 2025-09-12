@@ -83,30 +83,13 @@ const LP_OrderGraph = () => (
       decorator={() => (
         <View>
           <View
-            style={{
-              position: 'absolute',
-              top: rfSpacing['7xl'],
-              left: (screenWidth - 30) * 3 / 7 - 30,
-              backgroundColor: colors.LP_HeadingColor,
-              paddingHorizontal: rfSpacing['ms'],
-              paddingVertical: rfSpacing['xs'],
-              borderRadius: rfSpacing['s'],
-              zIndex: 999,
-            }}>
-            <Text style={{ color:colors.LP_White, fontSize: rfSpacing['ml'] }}>
+            style={styles.Decor}>
+            <Text style={styles.Blackboxtext}>
               25,234 PKR
             </Text>
           </View>
           <View
-            style={{
-              position: 'absolute',
-              top: rfSpacing['8xll'],
-              left: (screenWidth - 10) * 3 / 7 - 1,
-              width: rfSpacing['l'],
-              height: rfSpacing['l'],
-              borderRadius: rfSpacing['s'],
-              backgroundColor: colors.LP_HeadingColor,
-            }}
+            style={styles.BlackDot }
           />
         </View>
       )}
@@ -123,9 +106,36 @@ const styles = StyleSheet.create({
     height: rfSpacing['3.1H'],
     backgroundColor: 'white',
     elevation: rfSpacing['xxs'],
-    top:-rfSpacing['1H'],
+    top: -rfSpacing['1H'],
     alignSelf: 'center',
     borderRadius: rfSpacing['3xl'],
+  },
+  Decor: {
+
+    position: 'absolute',
+    top: rfSpacing['7xl'],
+    left: (screenWidth - 30) * 3 / 7 - 30,
+    backgroundColor: colors.LP_HeadingColor,
+    paddingHorizontal: rfSpacing['ms'],
+    paddingVertical: rfSpacing['xs'],
+    borderRadius: rfSpacing['s'],
+    zIndex: 999,
+
+  },
+  Blackboxtext: {
+    color: colors.LP_White,
+    fontSize: rfSpacing['ml']
+  },
+
+  BlackDot:
+  {
+    position: 'absolute',
+    top: rfSpacing['8xll'],
+    left: (screenWidth - 10) * 3 / 7 - 1,
+    width: rfSpacing['l'],
+    height: rfSpacing['l'],
+    borderRadius: rfSpacing['s'],
+    backgroundColor: colors.LP_HeadingColor,
   },
   statsRow: {
     flexDirection: 'row',
@@ -134,23 +144,23 @@ const styles = StyleSheet.create({
     gap: rfSpacing['xl'],
   },
   containerone: {
-   width: rfSpacing['1.43H'],
+    width: rfSpacing['1.43H'],
     height: rfSpacing['9xl'],
-    backgroundColor: '#F2F3F6',
+    backgroundColor: colors.LP_Pointsbgcolor,
     borderWidth: rfSpacing['xxxs'],
-    borderColor: '#E6E9EF',
+    borderColor: colors.LP_TabColor,
     borderRadius: rfSpacing['xl'],
   },
   containertwo: {
-    backgroundColor: '#F2F3F6',
+    backgroundColor: colors.LP_Pointsbgcolor,
     borderWidth: rfSpacing['xxxs'],
-    borderColor: '#E6E9EF',
+    borderColor: colors.LP_TabColor,
     borderRadius: rfSpacing['xl'],
   },
   statLabel: {
     fontSize: rfSpacing['l'],
     fontWeight: '400',
-    color: '#5C6670',
+    color: colors.LP_rememberhaed,
     paddingLeft: rfSpacing['xl'],
     paddingTop: rfSpacing['xl'],
   },
@@ -164,7 +174,7 @@ const styles = StyleSheet.create({
   subLabel: {
     fontSize: rfSpacing['l'],
     fontWeight: '400',
-    color: '#5C6670',
+    color: colors.LP_rememberhaed,
     paddingLeft: rfSpacing['xl'],
     paddingTop: rfSpacing['xl'],
   },
@@ -179,5 +189,5 @@ const styles = StyleSheet.create({
     borderRadius: rfSpacing['xl'],
     marginRight: rfSpacing['3xl'],
     top: -rfSpacing['m'],
-},
+  },
 });

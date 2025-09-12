@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import styles from '../screens/Auth/styles';
+import colors from '../theme/colors';
 type Props = {
   points: string;
   setPoints: (val: string) => void;
@@ -36,7 +37,7 @@ const LP_PaymentForm = ({
       <View style={styles.FD_R_AI_C_MB_XML_MT_M}>
         <TextInput
           placeholder="Enter Points"
-          placeholderTextColor="#999"
+          placeholderTextColor={colors.LP_RedeemFormPlaceholder}
           keyboardType="numeric"
           style={styles.F_1_BG_W_BR_M_P_L_FS_L_CL_HC_E_XXXS}
           value={points}
@@ -45,7 +46,7 @@ const LP_PaymentForm = ({
         <Text style={styles.MX_M_FS_XXL_TOP_NXL_FW_BOLD_CL_HC}>=</Text>
         <TextInput
           placeholder="0"
-          placeholderTextColor="#999"
+          placeholderTextColor={colors.LP_RedeemFormPlaceholder}
           style={styles.F_1_BG_W_BR_M_P_L_FS_L_CL_HC_E_XXXS}
           editable={false}
           value={calculatedAmount}
@@ -62,14 +63,14 @@ const LP_PaymentForm = ({
         <View style={styles.MT_M}>
           <TextInput
             placeholder="Wallet Holder Name"
-            placeholderTextColor="#999"
+            placeholderTextColor={colors.LP_RedeemFormPlaceholder}
             style={styles.BG_W_BR_M_P_M_MB_M_CL_HC}
             value={holderName}
             onChangeText={setHolderName}
           />
           <TextInput
             placeholder="Wallet / Account Number"
-            placeholderTextColor="#9b9999ff"
+            placeholderTextColor={colors.LP_RedeemFormPlaceholder}
             keyboardType="numeric"
             style={styles.BG_W_BR_M_P_M_MB_M_CL_HC}
             value={accountNumber}

@@ -1,6 +1,23 @@
 
 export default {
-
+  LP_LoginGradientone:"#ECECEC",
+  LP_LoginGradientTwo:"#FCD7CD",
+  LP_ForgotButtonTouch:"#eaedeeff",
+  LP_ActiveOrange:"#f58d7aff",
+  LP_OrderReciveBorderColor:"#dbd9d9ff",
+  LP_SignatureImageBorder:"#ccc",
+  LP_HomeIconWrapper:"#feb9a6ff",
+  LP_HomeContainer:"#f3f3f3ff",
+  LP_BuyItemBG:"#f6f6f6",
+  LP_BuyItemcolor:"#222",
+  LP_BuyItemGray:"#333",
+  LP_PlaceOrderDropdown:"#444",
+  LP_PlaceOrderContainer4:"#E5E7EB",
+  LP_Buyitemsbg:"#555",
+  LP_RadioCircle:"#999",
+  LP_BuyItemList:"#ddd",
+  LP_placeorderDropdownItems:"#eee",
+  LP_LoadingBTNColor:"#ffe6e1",
   LP_inputborder:"#E6E9EF",
   LP_borderText:"#798692",
   LP_maincolor:"#E85D43",
@@ -32,9 +49,14 @@ export default {
   LP_Searchcolor:"#E4EBF0",
   LP_bordersubmit:"#C5C7D0",
   LP_amountcolor:"#1EA765",
+  LP_LightGreen:"#32CD32",
   LP_Containerbg:"#f8f8f8",
   LP_Shadeofwhite:"#F1F6F9",
   LP_Mainlightorange:"#FFE9E5",
+
+  LP_SubConBorderColor: "#FFCDC4",
+  LP_SearchPlaceholdertext:"#888",
+  LP_RedeemFormPlaceholder:"#999",
   
 
   LP_Scannerflashbg:"#2c2c2cff",
@@ -68,5 +90,12 @@ export default {
   LP_platinumblockone:"#E4EAFF",
   LP_Platinumblocktwo:"#B9C6FA",
 
+
+  LP_YellowBorder:"#EAAA15",
+  LP_YellowText:"#FFCB00",
+  LP_GreenBorder:"#2AC87C",
+  LP_GreenText:"#2AC87C",
+  LP_RedBorder:"#EA3454",
+  LP_Redtext:"#EA3454",
  
 };

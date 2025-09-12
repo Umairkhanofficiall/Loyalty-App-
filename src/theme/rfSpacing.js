@@ -22,6 +22,7 @@ export default {
   'xmml':moderateScale(17),
 
   '3xl': moderateScale(18),
+  '3xml':moderateScale(19),
   '4xl': moderateScale(20),
   '4xlT': scale(20),
   '4xxsl': moderateScale(22),
@@ -87,6 +88,7 @@ export default {
   '2.6H': moderateScale(260),
   '2.7H':moderateScale(270),
   '2.8H':moderateScale(280),
+  '2.95H':moderateScale(295),
   '3H': moderateScale(300),
   '3.05H':moderateScale(302),
   '3.10H':moderateScale(305),

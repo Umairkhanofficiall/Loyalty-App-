@@ -1,6 +1,9 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, FlatList, Image, Pressable } from 'react-native';
+import { View, Text, TouchableOpacity, FlatList, Image, Pressable} from 'react-native';
 import { getImage } from '../assets/Images/images';
+import styles from '../screens/Auth/styles';
+
+
 
 type Props = {
   products: string[];
@@ -19,8 +22,8 @@ type Props = {
   setPaymentMethod: (val: string) => void;
   isValid: boolean;
   onSubmit: () => void;
-  styles: any;
 };
+
 
 const LP_OrderForm = ({
   products,
@@ -39,7 +42,8 @@ const LP_OrderForm = ({
   setPaymentMethod,
   isValid,
   onSubmit,
-  styles,
+
+
 }: Props) => (
   <View>
     <Text style={styles.NewOrderText}>New Order </Text>
@@ -53,7 +57,7 @@ const LP_OrderForm = ({
           {selectedProduct ? selectedProduct : 'Select Product/Suppliers'}
         </Text>
       </View>
-      <Image source={getImage('arrowdown')} style={{width:30, height:30,resizeMode:"contain",top:-26,left:320}} />
+      <Image source={getImage('arrowdown')} style={styles.Arrowdownicon} />
     </TouchableOpacity>
     <View>
       {showDropdown && (
@@ -80,7 +84,7 @@ const LP_OrderForm = ({
     <View style={styles.cartonInputContainer}>
       <Text style={styles.cartonInputText}>{cartonCount}</Text>
       <TouchableOpacity onPress={() => setCartonCount(cartonCount + 1)}>
-        <Image source={getImage('updown')} style={{width:20,height:20,resizeMode:"contain"}} />
+        <Image source={getImage('updown')} style={styles.updownicon} />
       </TouchableOpacity>
     </View>
     <Text style={styles.label}>Order Unit</Text>
@@ -136,3 +140,5 @@ const LP_OrderForm = ({
 );
 
 export default LP_OrderForm;
+
+  

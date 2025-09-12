@@ -1,7 +1,4 @@
 import { StyleSheet, Text, View, Image, Pressable, ScrollView } from 'react-native'
-import React, { useState } from 'react';
-import TabBar from '../../../../Ui/LP_ToggleButton';
-import LP_MainPointsCard from '../../../../Ui/LP_MainPointsCard';
 import LP_GetPoints from '../../../../Ui/LP_GetPoints';
 import LP_FilterButton from '../../../../Ui/LP_FilterButton';
 import styles from '../../../Auth/styles';

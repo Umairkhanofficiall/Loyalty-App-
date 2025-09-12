@@ -48,7 +48,7 @@ export default function ButtomTAB() {
               <View
                 style={[
                   styles.iconWrapper,
-                  focused && { backgroundColor: '#F1F6F9' },
+                  focused && { backgroundColor: colors.LP_Shadeofwhite },
                 ]}
               >
                 <HomeTab
@@ -62,7 +62,7 @@ export default function ButtomTAB() {
               <View
                 style={[
                   styles.iconWrapper,
-                  focused && { backgroundColor: '#F1F6F9'},
+                  focused && { backgroundColor: colors.LP_Shadeofwhite},
                 ]}
               >
                 <LoyaltyTab
@@ -83,7 +83,7 @@ export default function ButtomTAB() {
               <View
                 style={[
                   styles.iconWrapper,
-                  focused && { backgroundColor: '#F1F6F9' },
+                  focused && { backgroundColor: colors.LP_Shadeofwhite },
                 ]}
               >
                 <OrderTab
