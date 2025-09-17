@@ -4,6 +4,7 @@ import styles from '../screens/Auth/styles'
 import Profileimage from '../assets/Images/Profile/Profileimage'
 import Verifyicon from '../assets/Images/Profile/Verifyicon'
 import { getImage } from '../assets/Images/images'
+import Arrow from '../assets/Images/Profile/Arrow'
 
 const LP_ProfileSecondRow = () => {
   return (
@@ -25,7 +26,7 @@ const LP_ProfileSecondRow = () => {
                 </View>
               </View>
               <View style={styles.ML_95L_MT_XXL}>
-                <Image source={getImage('arrow')} style={styles.Arrowicon} />
+                <Arrow/>
               </View>
             </View>
     

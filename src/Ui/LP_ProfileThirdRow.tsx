@@ -6,6 +6,7 @@ import ProfileLevels from '../assets/Images/Profile/ProfileLevels'
 import ProfileOrder from '../assets/Images/Profile/ProfileOrder'
 import ProfilePoints from '../assets/Images/Profile/ProfilePoints'
 import { getImage } from '../assets/Images/images'
+import Arrow from '../assets/Images/Profile/Arrow'
 
 const LP_ProfileThirdRow = () => {
   return (
@@ -19,8 +20,8 @@ const LP_ProfileThirdRow = () => {
                   <ProfileFlag />
                   <Text style={styles.BoxText}>Go To Redeem</Text>
                 </View>
-                <View>
-                  <Image source={getImage('arrow')} style={styles.ArrowiconBoxes} />
+                <View style={styles.ArrowiconBoxes}>
+                 <Arrow/>
                 </View>
               </View>
             </View>
@@ -30,8 +31,8 @@ const LP_ProfileThirdRow = () => {
                   <ProfileOrder />
                   <Text style={styles.BoxText}>All Orders</Text>
                 </View>
-                <View>
-                  <Image source={getImage('arrow')} style={styles.ArrowiconBoxes} />
+                 <View style={styles.ArrowiconBoxes}>
+                 <Arrow/>
                 </View>
               </View>
             </View>
@@ -44,8 +45,8 @@ const LP_ProfileThirdRow = () => {
                   <ProfileLevels />
                   <Text style={styles.BoxText}>Levels</Text>
                 </View>
-                <View>
-                  <Image source={getImage('arrow')} style={styles.ArrowiconBoxes} />
+                 <View style={styles.ArrowiconBoxes}>
+                 <Arrow/>
                 </View>
               </View>
             </View>
@@ -55,8 +56,8 @@ const LP_ProfileThirdRow = () => {
                   <ProfilePoints />
                   <Text style={styles.BoxText}>Loyalty Points</Text>
                 </View>
-                <View>
-                  <Image source={getImage('arrow')} style={styles.ArrowiconBoxes} />
+                 <View style={styles.ArrowiconBoxes}>
+                 <Arrow/>
                 </View>
               </View>
             </View>

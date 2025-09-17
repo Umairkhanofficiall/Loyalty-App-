@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View, Pressable, Image } from 'react-native'
 import { useState } from 'react';
 import React from 'react'
-import FilterModal from '../Ui/LP_Calender';
+import FilterModal from './LP_Calender'
 import rfSpacing from '../theme/rfSpacing';
 import colors from '../theme/colors';
 import { getImage } from '../assets/Images/images';
+import ArrowDown from '../assets/Images/Order/ArrowDown';
 
 const LP_FilterButton = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -23,7 +24,9 @@ const LP_FilterButton = () => {
       <View style={styles.W_1_05H_H_5XL_BC_TMB_BW_XXXS_BG_W_BR_S_ML_1_5H_MT_4XL}>
         <View style={styles.FD_R}>
           <Text style={styles.FS_ML_FW_400_CL_HC_TA_C_PT_XS_ML_XS}>This month</Text>
-          <Image source={getImage('arrowdown')} style={styles.H_4XLL_W_4XLL_MT_XS} />
+          <View style={styles.H_4XLL_W_4XLL_MT_XS}>
+          <ArrowDown/>
+          </View>
         </View>
       </View>
     </Pressable>
@@ -57,6 +60,7 @@ const styles = StyleSheet.create({
   H_4XLL_W_4XLL_MT_XS: {
     height: rfSpacing['4xll'],
     width: rfSpacing['4xll'],
-    marginTop: rfSpacing['xs'],
+    marginTop: rfSpacing['l'],
+    marginLeft:rfSpacing['xs']
   },
 });

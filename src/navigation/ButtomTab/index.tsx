@@ -16,6 +16,7 @@ import LoyaltyTab from '../../assets/Images/ButtomTab/LoyaltyTab';
 import QrcodeTab from '../../assets/Images/ButtomTab/QrcodeTab';
 import OrderTab from '../../assets/Images/ButtomTab/OrderTab';
 import ProfileTab from '../../assets/Images/ButtomTab/ProfileTab';
+import Notification from '../../screens/App/Home/Notification';
 import rfSpacing from '../../theme/rfSpacing';
 // import Payment from '../../screens/App/LoyaltyPoints/Payment';
 
@@ -29,6 +30,7 @@ export type BottomTabParamList = {
   Levels: undefined;
   Redeem: undefined;
   History: undefined;
+  Notification:undefined;
   // Payment:undefined;
 };
 
@@ -124,6 +126,8 @@ export default function ButtomTAB() {
       <Tab.Screen name="Levels" component={Levels} options={{ tabBarButton: () => null, headerShown: false, }} />
       <Tab.Screen name="Redeem" component={Redeem} options={{ tabBarButton: () => null, headerShown: false, }} />
       <Tab.Screen name="History" component={History} options={{ tabBarButton: () => null, headerShown: false, }} />
+      <Tab.Screen name="Notification" component={Notification} options={{ tabBarButton: () => null, headerShown: false, }} />
+      
         {/* <Tab.Screen name="Payment" component={Payment} options={{ tabBarButton: () => null, headerShown: false, }} /> */}
     </Tab.Navigator>
 

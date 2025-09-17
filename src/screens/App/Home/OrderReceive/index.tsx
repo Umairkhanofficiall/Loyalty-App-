@@ -5,6 +5,7 @@ import { getImage } from '../../../../assets/Images/images'
 
 import styles from '../../../Auth/styles'
 import LP_BuyItemsGoBack from '../../../../Ui/LP_BuyItemsGoBack'
+import OrderBox from '../../../../assets/Images/Order/OrderBox'
 const OrderReceive = () => {
   const orders = [
     {
@@ -57,25 +58,26 @@ const OrderReceive = () => {
         data={orders}
         keyExtractor={(item) => item.id}
         ListHeaderComponent={
-          <LP_BuyItemsGoBack title="Order Assigned to you"/>
+          <LP_BuyItemsGoBack title="Order Assigned to you" />
         }
         renderItem={({ item }) => (
           <Pressable onPress={() => navigation.navigate("Signaturetext" as never)}>
             <View style={styles.W_3_H_9_BG_W_BW_XXXS_BC_LO_MT_XXL_BR_XXL_AS_C}>
               <View style={styles.FD_R_MT_4xxll}>
-                <Image
-                  source={getImage("tickk")}
-                  style={styles.H_5XXML_W_5XXML_ML_S}
-                />
+                <View style={styles.iconBoxRecive}>
+                  <View style={styles.iconInner}>
+                    <OrderBox />
+                  </View>
+                </View>
                 <View>
-                  <Text style={styles.CL_NG_ML_3XL_TOP_NXS}>
+                  <Text style={styles.CL_NG_ML_L_TOP_NXS}>
                     {item.date}
                   </Text>
-                  <Text style={styles.CL_HC_ML_3XL_FS_XML_FW_600_MT_XXXS}>
+                  <Text style={styles.CL_HC_ML_L_FS_XML_FW_600_MT_XXXS}>
                     {item.title}
                   </Text>
                 </View>
-                <View style={styles.ML_7XMML_GAP_XXS}>
+                <View style={styles.ML_8XL_GAP_XXS}>
                   <Text style={styles.CL_HC_FS_XML_MT_XS_ML_NXL}>
                     {item.price}
                   </Text>

@@ -31,6 +31,7 @@ const ScanBar = () => {
       </Pressable>
       <Pressable onPress={() => navigation.goBack()}>
         {({ pressed }) => (
+          <View>
           <Image
             source={getImage('cross')}
             style={[
@@ -38,6 +39,7 @@ const ScanBar = () => {
               { tintColor: pressed ? colors.LP_White : colors.LP_NaturalGray }
             ]}
           />
+          </View>
         )}
       </Pressable>
     </LP_LinearGradient>

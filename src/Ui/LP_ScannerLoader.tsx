@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import LottieView from "lottie-react-native";
-import rfSpacing from "../theme/rfSpacing"; // path adjust karo
-import colors from "../theme/colors";       // path adjust karo
+import rfSpacing from "../theme/rfSpacing"; 
+import colors from "../theme/colors";       
 
 type LoaderProps = {
-  message?: string; // 👈 optional text
+  message?: string; 
 };
 
 export default function ScannerLoader({ message = "Loading app..." }: LoaderProps) {
@@ -13,7 +13,7 @@ export default function ScannerLoader({ message = "Loading app..." }: LoaderProp
     <View style={styles.loaderContainer}>
       <View style={styles.loaderBox}>
         <LottieView
-          source={require("../assets/animations/spinner.json")} // 👈 apne path ka dhyaan rakho
+          source={require("../assets/animations/spinner.json")} 
           autoPlay
           loop
           style={styles.W_10XL_H_10XL}

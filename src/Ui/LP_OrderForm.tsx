@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, TouchableOpacity, FlatList, Image, Pressable} from 'react-native';
 import { getImage } from '../assets/Images/images';
 import styles from '../screens/Auth/styles';
+import ArrowUpDown from '../assets/Images/Order/ArrowUpDown';
+import ArrowDown from '../assets/Images/Order/ArrowDown';
 
 
 
@@ -57,7 +59,9 @@ const LP_OrderForm = ({
           {selectedProduct ? selectedProduct : 'Select Product/Suppliers'}
         </Text>
       </View>
-      <Image source={getImage('arrowdown')} style={styles.Arrowdownicon} />
+      <View style={styles.Arrowdownicon}>
+      <ArrowDown/>
+      </View>
     </TouchableOpacity>
     <View>
       {showDropdown && (
@@ -84,7 +88,9 @@ const LP_OrderForm = ({
     <View style={styles.cartonInputContainer}>
       <Text style={styles.cartonInputText}>{cartonCount}</Text>
       <TouchableOpacity onPress={() => setCartonCount(cartonCount + 1)}>
-        <Image source={getImage('updown')} style={styles.updownicon} />
+        <View style={styles.updownicon}>
+       <ArrowUpDown/>
+         </View>
       </TouchableOpacity>
     </View>
     <Text style={styles.label}>Order Unit</Text>

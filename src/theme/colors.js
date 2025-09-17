@@ -53,29 +53,20 @@ export default {
   LP_Containerbg:"#f8f8f8",
   LP_Shadeofwhite:"#F1F6F9",
   LP_Mainlightorange:"#FFE9E5",
-
+  LP_FlashColor:'#ffff00ff',
+  LP_ImagetintColor:"#878585ff",
   LP_SubConBorderColor: "#FFCDC4",
   LP_SearchPlaceholdertext:"#888",
   LP_RedeemFormPlaceholder:"#999",
-  
-
   LP_Scannerflashbg:"#2c2c2cff",
-
-
   LP_ProfileGrayborder:"#E6E9EF",
   LP_ProfileGrayBox:"#F1F6F9",
-
   LP_ButtomActiveTab:'#F1F6F9',
-
   LP_OrderBoxMonth:"#C5C7D0",
   LP_IconBG:"#F2F3F6",
   LP_OrderBg:"#f2f3f6",
   LP_BorderBG:"#E6E9EF",
-
   LP_OrderBC:"#E4EBF0",
-
-  
-
   LP_Gradientone:'#FFFFFF',
   LP_Gradienttwo:'#FFE9E5',
   LP_Gradientthree:'#E85D43',
@@ -89,13 +80,11 @@ export default {
   LP_Goldenblocktwo:"#F2DD82",
   LP_platinumblockone:"#E4EAFF",
   LP_Platinumblocktwo:"#B9C6FA",
-
-
   LP_YellowBorder:"#EAAA15",
   LP_YellowText:"#FFCB00",
   LP_GreenBorder:"#2AC87C",
   LP_GreenText:"#2AC87C",
   LP_RedBorder:"#EA3454",
   LP_Redtext:"#EA3454",
- 
+  LP_PlacehOlderText:"#798692"
 };

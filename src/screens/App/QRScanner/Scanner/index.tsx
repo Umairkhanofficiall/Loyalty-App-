@@ -10,6 +10,12 @@ import { BottomTabParamList } from '../../../../navigation/ButtomTab';
 import Flash from '../../../../assets/Images/Scanner/Flash';
 import LP_LottieFullS from '../../../../Ui/LP_LottieFullS';
 import styles from '../../../Auth/styles';
+import colors from '../../../../theme/colors';
+import Hurrah from '../../../../assets/Images/Scanner/Hurrah';
+import QrCode from '../../../../assets/Images/Scanner/QrCode';
+import Arrow from '../../../../assets/Images/Profile/Arrow';
+
+
 
 type ScannerNavigationProp = StackNavigationProp<RootStackParamList, 'Scanner'>;
 
@@ -63,7 +69,7 @@ export default function Scanner({ navigation }: Props) {
           style={styles.W_5XXSL_H_5XXSL_BG_FLASH_BR_3XL_JC_C_AI_C_MT_5XXSL_ML_3_27H}
           onPress={() => setFlashOn(!flashOn)}
         >
-          <Flash fill={flashOn ? "#ffff00ff" : "white"} />
+          <Flash fill={flashOn ? colors.LP_FlashColor : colors.LP_White} />
         </Pressable>
 
         <View style={styles.AI_C_JC_C_MT_7XL}>
@@ -81,14 +87,14 @@ export default function Scanner({ navigation }: Props) {
             <View
               style={[
                 styles.CROSS_WRAPPER,
-                { backgroundColor: pressed ? "#000000ff" : "transparent" }
+                { backgroundColor: pressed ? colors.LP_HeadingColor : "transparent" }
               ]}
             >
               <Image
                 source={getImage('cross')}
                 style={[
                   styles.W_6XSL_H_6XSL_RM_C,
-                  { tintColor: pressed ? "#000" : "#878585ff" }
+                  { tintColor: pressed ? colors.LP_HeadingColor : colors.LP_ImagetintColor }
                 ]}
               />
             </View>
@@ -106,10 +112,14 @@ export default function Scanner({ navigation }: Props) {
       >
         <View style={styles.MODAL_OVERLAY}>
           <View style={styles.MODAL_BOX}>
-            <Image source={getImage('Text')} style={styles.W_2H_H_10XL_MT_XML_ML_3XL} />
+            <View style={styles.W_2H_H_10XL_MT_XML_ML_3XL}>
+            <Hurrah/>
+            </View>
             <Text style={styles.MODAL_POINTS}>You have earned</Text>
             <View style={styles.ROW_W_2_25H_H_8XL_BG_GRADIENT_BR_XXL_MT_XL}>
+              <View>
               <Image source={getImage('tick')} style={styles.W_5XL_H_5XL_MT_XXL_ML_3XL_RM_C} />
+              </View>
               <Text style={styles.POINTS_VALUE}>125 Points</Text>
             </View>
             <View style={styles.ROW_MT_XL}>
@@ -119,7 +129,9 @@ export default function Scanner({ navigation }: Props) {
             <TouchableOpacity style={styles.MODAL_BUTTON} onPress={resetScanner}>
               <View style={styles.ROW}>
                 <Text style={styles.MODAL_BUTTON_TEXT}>Scan Next Item</Text>
-                <Image source={getImage('qrcode')} style={styles.W_3XL_H_3XL_MT_XMS_ML_M_TINT_W} />
+                <View style={styles.W_3XL_H_3XL_MT_XMS_ML_M_TINT_W}>
+                <QrCode/>
+                </View>
               </View>
             </TouchableOpacity>
 
@@ -129,7 +141,9 @@ export default function Scanner({ navigation }: Props) {
             >
               <View style={styles.ROW}>
                 <Text style={styles.MODAL_BUTTON_TEXT_TWO}>Go Scan History</Text>
-                <Image source={getImage('arrow')} style={styles.W_6XL_H_6XL_TOP_NXS_ML_XS_TINT_HC} />
+                <View style={styles.ML_S_MT_M}>
+                <Arrow/>
+                </View>
               </View>
             </Pressable>
           </View>

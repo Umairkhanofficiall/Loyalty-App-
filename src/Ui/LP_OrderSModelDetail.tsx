@@ -4,6 +4,7 @@ import styles from '../screens/Auth/styles'
 import ThirdModel from '../assets/Images/Order/ThirdModel'
 import { getImage } from '../assets/Images/images'
 import { useNavigation } from '@react-navigation/native'
+import Copy from '../assets/Images/Order/Copy'
 
 const LP_OrderSModelDetail = () => {
     const navigation = useNavigation();
@@ -22,7 +23,9 @@ const LP_OrderSModelDetail = () => {
           </View>
           <View style={styles.OrderNumberContainer}>
             <Text style={styles.OrderNumberText}>Order Number : 1987091575757</Text>
-            <Image source={getImage('copy')} style={styles.W_XL_H_XL_ResizeContain_MarginTop_XSS_MarginLeft_XXS} />
+            <View style={styles.W_XL_H_XL_ResizeContain_MarginTop_XSS_MarginLeft_XXS}>
+            <Copy/>
+            </View>
           </View>
           <TouchableOpacity
             onPress={() => navigation.navigate('Order' as never)}

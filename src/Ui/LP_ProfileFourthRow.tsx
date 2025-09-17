@@ -4,6 +4,7 @@ import styles from '../screens/Auth/styles'
 import { getImage } from '../assets/Images/images'
 import ProfileFlag from '../assets/Images/Profile/ProfileFlag'
 import ProfileLevels from '../assets/Images/Profile/ProfileLevels'
+import Arrow from '../assets/Images/Profile/Arrow'
 
 const LP_ProfileFourthRow = () => {
   return (
@@ -14,9 +15,9 @@ const LP_ProfileFourthRow = () => {
                 <ProfileFlag />
                 <Text style={styles.BoxText}>Help Center</Text>
               </View>
-              <View>
-                <Image source={getImage('arrow')} style={styles.ArrowiconBoxes} />
-              </View>
+               <View style={styles.ArrowiconBoxes}>
+                 <Arrow/>
+                </View>
             </View>
           </View>
           <View style={styles.Boxes2}>
@@ -25,9 +26,9 @@ const LP_ProfileFourthRow = () => {
                 <ProfileLevels />
                 <Text style={styles.BoxText}>Terms & Policies</Text>
               </View>
-              <View>
-                <Image source={getImage('arrow')} style={styles.ArrowiconBoxes} />
-              </View>
+               <View style={styles.ArrowiconBoxes}>
+                 <Arrow/>
+                </View>
             </View>
           </View>
         </View>

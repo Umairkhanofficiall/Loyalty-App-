@@ -15,6 +15,7 @@ import BuyItems from '../../screens/App/LoyaltyPoints/Redeem/BuyItems';
 import Payment from '../../screens/App/LoyaltyPoints/Redeem/Payment';
 import OrderReceive from '../../screens/App/Home/OrderReceive';
 import Signaturetext from '../../screens/App/Home/Signaturetext';
+import Notification from '../../screens/App/Home/Notification';
 export type RootStackParamList = {
  Login:undefined;
  FAuth : undefined;
@@ -30,6 +31,7 @@ export type RootStackParamList = {
  OrderReceive:undefined,
  Signaturetext:undefined,
  Points:undefined,
+ Navigation:undefined,
 };
 const Stack = createStackNavigator<RootStackParamList>();
 export default function LoginNavigation() {
@@ -53,6 +55,7 @@ export default function LoginNavigation() {
         <Stack.Screen name="Payment" component={Payment} options={{headerShown: false}}/> 
         <Stack.Screen name="OrderReceive" component={OrderReceive} options={{headerShown: false}}/>
         <Stack.Screen name="Signaturetext" component={Signaturetext} options={{headerShown: false}}/>
+        <Stack.Screen name="Notification" component={Notification} options={{headerShown: false}}/>
 
 
       </Stack.Navigator>

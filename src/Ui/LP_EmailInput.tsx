@@ -3,6 +3,7 @@ import React from 'react'
 import styles from '../screens/Auth/styles'
 import { useState } from 'react'
 import { useIsFocused } from '@react-navigation/native';
+import colors from '../theme/colors';
 
 
 const LP_EmailInput = () => {
@@ -19,7 +20,7 @@ const LP_EmailInput = () => {
     <View>
       <TextInput
        placeholder='Enter email address'
-        placeholderTextColor="#798692"
+        placeholderTextColor={colors.LP_PlacehOlderText}
          style={styles.input}
          onChangeText={setEmail}
          value={Email}

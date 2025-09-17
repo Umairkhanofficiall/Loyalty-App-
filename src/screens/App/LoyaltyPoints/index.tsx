@@ -4,15 +4,12 @@ import LP_GetPoints from '../../../Ui/LP_GetPoints';
 import LP_FilterButton from '../../../Ui/LP_FilterButton';
 import LP_LoyaltyMainThree from '../../../Ui/LP_LoyaltyMainThree';
 import styles from '../../Auth/styles';
+import LP_Statusbar from '../../../Ui/LP_Statusbar';
 
 const Points = () => {
   return (
     <>
-    <StatusBar
-            translucent={false}
-            backgroundColor="white"
-            barStyle="dark-content"
-          />
+   <LP_Statusbar/>
     <View style={styles.containerPoints}>
       <ScrollView contentContainerStyle={styles.PB_9xml}>
        <LP_LoyaltyMainThree/>

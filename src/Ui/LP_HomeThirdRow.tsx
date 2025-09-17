@@ -6,6 +6,7 @@ import LP_YourLevel from './LP_YourLevel'
 import LP_ScanProgress from './LP_ScanProgress'
 import { getImage } from '../assets/Images/images'
 import colors from '../theme/colors'
+import Arrow from '../assets/Images/Profile/Arrow'
 const LP_HomeThirdRow = () => {
   return (
      <LP_LinearGradient
@@ -36,7 +37,9 @@ const LP_HomeThirdRow = () => {
                 <Text style={styles.C_PT_PL_FS}>Total Orders</Text>
                 <Text style={styles.C_PT_PL_FS_FW}>225</Text>
               </View>
-              <Image source={getImage('arrow')} style={styles.H_W_ML_MT} />
+              <View  style={styles.H_W_ML_MT}>
+              <Arrow/>
+              </View>
             </View>
           </View>
         </LP_LinearGradient>
